@@ -8,21 +8,41 @@ const SHEET_URLS: Record<string, string> = {
   PH: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeK6J7RrYqFyu1nczu93ofxt5fSaopQC2Tir-rrb7pMqUJO6BfPNyRtA_D89th8lMm3-m8OMWaRY51/pub?output=csv',
 };
 
+function splitCSVLine(line: string): string[] {
+  const vals: string[] = [];
+  let cur = '', inQ = false;
+  for (const ch of line) {
+    if (ch === '"') { inQ = !inQ; continue; }
+    if (ch === ',' && !inQ) { vals.push(cur.trim()); cur = ''; continue; }
+    cur += ch;
+  }
+  vals.push(cur.trim());
+  return vals;
+}
+
 function parseCSV(text: string): Record<string, string>[] {
   const lines = text.trim().split('\n');
-  if (lines.length < 2) return [];
-  const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
-  return lines.slice(1).map(line => {
-    const vals: string[] = [];
-    let cur = '', inQ = false;
-    for (const ch of line) {
-      if (ch === '"') { inQ = !inQ; continue; }
-      if (ch === ',' && !inQ) { vals.push(cur.trim()); cur = ''; continue; }
-      cur += ch;
+  // Find the header row - the one containing 写真URL
+  let headerIdx = 0;
+  for (let i = 0; i < Math.min(10, lines.length); i++) {
+    if (lines[i].includes('写真URL') || lines[i].includes('SEQ')) {
+      headerIdx = i;
+      break;
     }
-    vals.push(cur.trim());
-    return Object.fromEntries(headers.map((h, i) => [h, vals[i] ?? '']));
-  });
+  }
+  if (lines.length <= headerIdx + 1) return [];
+  const headers = splitCSVLine(lines[headerIdx]);
+  const results: Record<string, string>[] = [];
+  for (let i = headerIdx + 1; i < lines.length; i++) {
+    const vals = splitCSVLine(lines[i]);
+    // Only include rows that have a SEQ number (skip empty/description rows)
+    const row = Object.fromEntries(headers.map((h, j) => [h, vals[j] ?? '']));
+    const seq = row['SEQ']?.trim();
+    if (seq && /^\d+$/.test(seq)) {
+      results.push(row);
+    }
+  }
+  return results;
 }
 
 export async function GET(req: NextRequest) {
