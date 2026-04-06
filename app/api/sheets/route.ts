@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import type { FoodPhoto } from '@/types';
 
 const SHEET_URLS: Record<string, string> = {
-  JP: 'https://docs.google.com/spreadsheets/d/1tp6Q37OwweyqIfMEDVapCQ7N0yrru6eisqgDzXOxvvA/export?format=csv&gid=0',
-  SG: 'https://docs.google.com/spreadsheets/d/1JwESIC8gEmZQKQ1kWC2mp_GqHpzoRHBNkgBnBh-Nius/export?format=csv&gid=0',
-  MY: 'https://docs.google.com/spreadsheets/d/1CEd_qe4chbbdqVyx5tSShcarDqoB-SdPQ-yKzIHZ4V8/export?format=csv&gid=0',
-  ID: 'https://docs.google.com/spreadsheets/d/1nKyunGQCz-uS1XcLubf_ROgEu9wis0DLJuC9NuVLo64/export?format=csv&gid=0',
-  PH: 'https://docs.google.com/spreadsheets/d/1yGrdc0x6Z8s5hq63rIE9-NX-zSJsdcq8HLjIJBhgxBo/export?format=csv&gid=0',
+  SG: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMmJKk_LNGEKP9vj6o6u2BSpV5m-jC1a53v7oPYKqvOZKAdDDCYZCwdeDSiXHDfOYxgdKgPRomzf-Z/pub?output=csv',
+  ID: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vROPYwKEq5NzwUpUCHex7sGZtdL8hHXwnZ5t8bl7H_nlfN7DxkuvonMG65lCDxT_ABcc1BQoQnVaS2l/pub?output=csv',
+  JP: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTQdXIIAA0np27JHfPSTQXDyumVylu_9aUJ6oYDiIaEkTQaeGeLlcovKK40bn32c2_gd_Ja8QlxAZKK/pub?output=csv',
+  MY: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTMDzy4NikbMIoKT0KtgZH2MmcDqMQ4sTEOvormPRVzK9xLDwM87TZ6LZ7ASoIGtt-UGCTf3KNVz7V4/pub?output=csv',
+  PH: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeK6J7RrYqFyu1nczu93ofxt5fSaopQC2Tir-rrb7pMqUJO6BfPNyRtA_D89th8lMm3-m8OMWaRY51/pub?output=csv',
 };
 
 function parseCSV(text: string): Record<string, string>[] {
@@ -45,7 +45,7 @@ function toPhoto(row: Record<string, string>, country: string): FoodPhoto {
   const n = (k: string) => parseFloat(row[k] || '0') || 0;
   const colors = [1,2,3,4,5,6,7].map(i => row[`\u30ab\u30e9\u30fc${i}`] || '').filter(Boolean);
   const age = parseInt((row['AGE'] || '0').replace(/\D/g, '')) || 0;
-  const companion = row['\u30ab\u30b9\u98df\u4e8b\u306e\u76f8\u624b'] || '\u81ea\u5206';
+  const companion = row['\u98df\u4e8b\u306e\u76f8\u624b'] || '\u81ea\u5206';
   const peopleRaw = row['\u63a8\u5b9a\u4eba\u6570'] || '1';
   const peopleNum = parseInt(peopleRaw.replace(/\D/g, '')) || 1;
   const peopleCategory = peopleNum >= 4 ? '4\u4eba\u4ee5\u4e0a' : peopleNum === 3 ? '3\u4eba' : peopleNum === 2 ? '2\u4eba' : '1\u4eba';
@@ -83,10 +83,7 @@ function toPhoto(row: Record<string, string>, country: string): FoodPhoto {
 
 async function fetchMarket(market: string): Promise<FoodPhoto[]> {
   try {
-    const res = await fetch(SHEET_URLS[market], {
-      cache: 'no-store',
-      headers: { 'User-Agent': 'Mozilla/5.0' },
-    });
+    const res = await fetch(SHEET_URLS[market], { cache: 'no-store' });
     if (!res.ok) return [];
     const text = await res.text();
     if (!text || text.length < 100) return [];
@@ -101,10 +98,7 @@ export async function GET(req: NextRequest) {
 
   if (market && SHEET_URLS[market]) {
     try {
-      const res = await fetch(SHEET_URLS[market], {
-        cache: 'no-store',
-        headers: { 'User-Agent': 'Mozilla/5.0' },
-      });
+      const res = await fetch(SHEET_URLS[market], { cache: 'no-store' });
       if (!res.ok) return NextResponse.json({ error: `Sheet fetch failed: ${res.status}` }, { status: 500 });
       const rows = parseCSV(await res.text());
       return NextResponse.json(rows);
@@ -117,7 +111,7 @@ export async function GET(req: NextRequest) {
   for (const m of ['JP','SG','MY','ID','PH']) {
     const photos = await fetchMarket(m);
     if (photos.length > 0) countries[m] = photos;
-    await new Promise(r => setTimeout(r, 300));
+    await new Promise(r => setTimeout(r, 200));
   }
   return NextResponse.json({ countries });
 }
