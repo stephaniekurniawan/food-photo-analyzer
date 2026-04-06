@@ -4,9 +4,9 @@ export interface MealRecord {
   description: string; analysis: string; photoUrl: string; colors: string[];
   weight: number; sugar: number; salt: number; potassium: number;
   calories: number; protein: number; fat: number; carbs: number; fiber: number;
-  servings: number; cuisine: string; companion: string;
+  servings: number; cuisine: string; companion: string; peopleCount: string;
 }
 export interface Filters {
   markets: string[]; cuisine: string; companion: string; sex: string;
-  marriage: string; child: string; minCal: number; maxCal: number;
+  marriage: string; child: string; minCal: number; maxCal: number; ageGroup: string;
 }
