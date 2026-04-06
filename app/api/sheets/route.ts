@@ -1,96 +1,134 @@
 import { NextRequest, NextResponse } from 'next/server';
-import type { FoodPhoto } from '@/types';
+import { FoodPhoto } from '@/types';
 
 const SHEET_URLS: Record<string, string> = {
-  SG: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMmJKk_LNGEKP9vj6o6u2BSpV5m-jC1a53v7oPYKqvOZKAdDDCYZCwdeDSiXHDfOYxgdKgPRomzf-Z/pub?output=csv',
-  ID: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vROPYwKEq5NzwUpUCHex7sGZtdL8hHXwnZ5t8bl7H_nlfN7DxkuvonMG65lCDxT_ABcc1BQoQnVaS2l/pub?output=csv',
-  JP: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTQdXIIAA0np27JHfPSTQXDyumVylu_9aUJ6oYDiIaEkTQaeGeLlcovKK40bn32c2_gd_Ja8QlxAZKK/pub?output=csv',
-  MY: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTMDzy4NikbMIoKT0KtgZH2MmcDqMQ4sTEOvormPRVzK9xLDwM87TZ6LZ7ASoIGtt-UGCTf3KNVz7V4/pub?output=csv',
-  PH: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeK6J7RrYqFyu1nczu93ofxt5fSaopQC2Tir-rrb7pMqUJO6BfPNyRtA_D89th8lMm3-m8OMWaRY51/pub?output=csv',
+  JP: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTQdXIIAA0np27JHfPSTQXDyumVylu_9aUJ6oYDiIaEkTQaeGeLlcovKK40bn32c2_gd_Ja8QlxAZKK/pub?output=csv",
+  SG: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRMmJKk_LNGEKP9vj6o6u2BSpV5m-jC1a53v7oPYKqvOZKAdDDCYZCwdeDSiXHDfOYxgdKgPRomzf-Z/pub?output=csv",
+  MY: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTMDzy4NikbMIoKT0KtgZH2MmcDqMQ4sTEOvormPRVzK9xLDwM87TZ6LZ7ASoIGtt-UGCTf3KNVz7V4/pub?output=csv",
+  ID: "https://docs.google.com/spreadsheets/d/e/2PACX-1vROPYwKEq5NzwUpUCHex7sGZtdL8hHXwnZ5t8bl7H_nlfN7DxkuvonMG65lCDxT_ABcc1BQoQnVaS2l/pub?output=csv",
+  PH: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQeK6J7RrYqFyu1nczu93ofxt5fSaopQC2Tir-rrb7pMqUJO6BfPNyRtA_D89th8lMm3-m8OMWaRY51/pub?output=csv",
 };
 
-function parseCSV(text: string): Record<string, string>[] {
-  const lines = text.split(/\r?\n/);
-  let headerIdx = -1;
-  for (let i = 0; i < Math.min(lines.length, 5); i++) {
-    const u = lines[i].toUpperCase();
-    if (u.includes('SEQ') && (u.includes('COUNTRY') || u.includes('\u5199\u771fURL'))) {
-      headerIdx = i; break;
+// Parse CSV text into array of string arrays (rows of cells)
+function parseCSVRaw(text: string): string[][] {
+  const rows: string[][] = [];
+  let row: string[] = [], cell = '', inQ = false;
+  const t = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  for (let i = 0; i < t.length; i++) {
+    const c = t[i];
+    if (inQ) {
+      if (c === '"' && t[i+1] === '"') { cell += '"'; i++; }
+      else if (c === '"') inQ = false;
+      else cell += c;
+    } else {
+      if (c === '"') inQ = true;
+      else if (c === ',') { row.push(cell); cell = ''; }
+      else if (c === '\n') { row.push(cell); rows.push(row); row = []; cell = ''; }
+      else cell += c;
     }
   }
-  if (headerIdx < 0) return [];
-  const parseRow = (line: string) => {
-    const vals: string[] = []; let cur = ''; let inQ = false;
-    for (const ch of line) {
-      if (ch === '"') { inQ = !inQ; continue; }
-      if (ch === ',' && !inQ) { vals.push(cur.trim()); cur = ''; continue; }
-      cur += ch;
-    }
-    vals.push(cur.trim());
-    return vals;
-  };
-  const headers = parseRow(lines[headerIdx]).map(h => h.replace(/^"|"$/g, ''));
-  const results: Record<string, string>[] = [];
-  for (let i = headerIdx + 1; i < lines.length; i++) {
-    if (!lines[i].trim()) continue;
-    const vals = parseRow(lines[i]);
-    const row = Object.fromEntries(headers.map((h, j) => [h, vals[j] ?? '']));
-    const seq = row['SEQ']?.trim();
-    if (seq && /^\d+$/.test(seq)) results.push(row);
-  }
-  return results;
+  if (cell || row.length) { row.push(cell); rows.push(row); }
+  return rows;
 }
 
-function toPhoto(row: Record<string, string>, country: string): FoodPhoto {
-  const n = (k: string) => parseFloat(row[k] || '0') || 0;
-  const ageStr = row['AGE'] || '';
-  const age = parseInt(ageStr) || 0;
+// The sheet structure:
+// Row 1 (index 0): English headers — SEQ, COUNTRY, RESIDENCE, SEX, AGE, HINCOME, MARRIAGE, CHILD, JOB, Q33, Q34_JP, CUISINE, "Estimated Number", "Dining Companion"
+// Row 2 (index 1): Japanese headers — 国, 居住地, 性別, 年齢, ... 写真URL, カラー１〜７, 容量, 糖分, 塩分, カリウム, カロリー, タンパク質, 脂肪, 炭水化物, 繊維, 推定人数, 料理, 推定人数カテゴリ, 食事の相手
+// Row 3+: actual data
 
-  // Estimated people: raw number in the unnamed "" column, or from "Estimated Number" column
-  const rawNum = parseInt(row[''] || '0') || 0;
-  const estNumStr = row['Estimated Number'] || row['推定人数カテゴリ'] || '';
-  const peopleNum = rawNum || (estNumStr.includes('4') ? 4 : estNumStr.includes('3') ? 3 : estNumStr.includes('2') ? 2 : estNumStr.includes('1') ? 1 : 0);
-  const peopleCategory = estNumStr || (peopleNum >= 4 ? '4人以上' : peopleNum === 3 ? '3人' : peopleNum === 2 ? '2人' : peopleNum === 1 ? '1人' : '');
+// Column indices based on the FULL header (JP row 2 which has all columns):
+// From your shared header:
+// 0=国(COUNTRY) 1=居住地(RESIDENCE) 2=性別(SEX) 3=年齢(AGE) 4=世帯収入(HINCOME)
+// 5=MARRIAGE 6=CHILD 7=JOB 8=Q33(filename) 9=Q34_JP(description)
+// 10=写真の内容 11=写真URL 12=カラー１ 13=カラー２ 14=カラー３ 15=カラー４ 16=カラー５ 17=カラー６ 18=カラー７
+// 19=容量(g) 20=糖分(g) 21=塩分(g) 22=カリウム(mg) 23=カロリー(kcal) 24=タンパク質(g) 25=脂肪(g) 26=炭水化物(g) 27=繊維(g)
+// 28=推定人数(raw number) 29=料理(cuisine) 30=推定人数カテゴリ(people category) 31=食事の相手(companion)
 
-  // Colors from カラー１〜７ columns
-  const colors: string[] = [];
-  for (let i = 1; i <= 7; i++) {
-    const c = (row[`カラー${i}`] || row[`Color${i}`] || row[`color${i}`] || '').trim();
-    if (c && c !== '0' && c.startsWith('#')) colors.push(c);
+// BUT the EN row (row 1) has different/fewer columns. We need to use the JP row to find column indices.
+// Strategy: use row 2 (JP headers) as the column index reference, skip it as data.
+
+function buildColMap(jpHeaderRow: string[]): Record<string, number> {
+  const map: Record<string, number> = {};
+  jpHeaderRow.forEach((h, i) => { map[h.trim()] = i; });
+  return map;
+}
+
+// Also build from EN header row for the new columns added
+function mergeColMaps(enRow: string[], jpRow: string[]): Record<string, number> {
+  const map: Record<string, number> = {};
+  enRow.forEach((h, i) => { if (h.trim()) map[h.trim()] = i; });
+  jpRow.forEach((h, i) => { if (h.trim()) map[h.trim()] = i; });
+  return map;
+}
+
+function toPhoto(cells: string[], colMap: Record<string, number>, country: string): FoodPhoto | null {
+  const get = (key: string) => (cells[colMap[key] ?? -1] || '').trim();
+  const num = (key: string) => parseFloat(get(key)) || 0;
+
+  const seq = parseInt(get('SEQ') || get('国') !== '' ? cells[0] : '0') || 0; // SEQ is col 0 in EN
+  // Actually SEQ is always col 0 in both rows
+  const seqVal = parseInt((cells[0] || '').trim()) || 0;
+  if (!seqVal) return null; // skip empty/header rows
+
+  const countryVal = (cells[colMap['COUNTRY'] ?? colMap['国'] ?? 1] || '').trim() || country;
+
+  // Photo URL — from 写真URL column
+  let photoUrl = get('写真URL');
+  // Extract just the URL if it has __ delimiters
+  if (photoUrl.includes('__')) {
+    const parts = photoUrl.split('__').filter(p => p.startsWith('http'));
+    photoUrl = parts[0] || '';
+  }
+  // Fallback: construct from filename
+  if (!photoUrl) {
+    const filename = get('Q33');
+    if (filename) photoUrl = `https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/${filename}`;
   }
 
-  // Photo URL: 写真URL column or construct from Q33 filename
-  const photoUrl = row['写真URL'] || row['Photo URL'] || (row['Q33'] ? `https://food-img.s3.ap-northeast-1.amazonaws.com/${country.toLowerCase()}/${row['Q33']}` : '');
+  // Colors from カラー１〜７
+  const colors: string[] = [];
+  for (let i = 1; i <= 7; i++) {
+    const c = get(`カラー${i}`);
+    if (c && c.startsWith('#')) colors.push(c);
+  }
+
+  // People category
+  const estNumCategory = get('推定人数カテゴリ') || get('Estimated Number');
+  const rawPeopleNum = parseInt(get('推定人数')) || 0;
+  const peopleCategory = estNumCategory ||
+    (rawPeopleNum >= 4 ? '4人以上' : rawPeopleNum === 3 ? '3人' : rawPeopleNum === 2 ? '2人' : rawPeopleNum === 1 ? '1人' : '');
+
+  const age = parseInt((get('AGE') || get('年齢')).replace(/[^0-9]/g, '')) || 0;
 
   return {
-    seq: parseInt(row['SEQ'] || '0') || 0,
-    country,
-    residence: row['RESIDENCE'] || '',
-    sex: row['SEX'] || '',
+    seq: seqVal,
+    country: countryVal || country,
+    residence: get('RESIDENCE') || get('居住地'),
+    sex: get('SEX') || get('性別'),
     age,
-    income: row['HINCOME'] || '',
-    marriage: row['MARRIAGE'] || '',
-    child: row['CHILD'] || '',
-    job: row['JOB'] || '',
-    filename: row['Q33'] || '',
-    description: row['Q34_JP'] || row['Q34_EN'] || '',
+    income: get('HINCOME') || get('世帯 収入HML'),
+    marriage: get('MARRIAGE') || get('未既婚'),
+    child: get('CHILD') || get('子どもの有無'),
+    job: get('JOB') || get('職業'),
+    filename: get('Q33'),
+    description: get('Q34_JP') || get('最近の、あなたの「食事の風景」写真の説明（和訳） ・撮影した食事　・撮影した時期　・時間帯 ・どこで　・誰と　・何をしながら　・何を食べたか ・誰が作った料理か、あるいは、どこで買った料理か'),
     analysisText: '',
     photoUrl,
     colors,
     nutrition: {
-      calories:  n('カロリー (kcal)') || n('Calories (kcal)') || n('calories'),
-      protein:   n('タンパク質 (g)') || n('Protein (g)') || n('protein'),
-      fat:       n('脂肪 (g)')       || n('Fat (g)')      || n('fat'),
-      carbs:     n('炭水化物 (g)')   || n('Carbs (g)')    || n('carbs'),
-      fiber:     n('繊維 (g)')       || n('Fiber (g)')    || n('fiber'),
-      sugar:     n('糖分（g）')      || n('Sugar (g)')    || n('sugar'),
-      salt:      n('塩分（g）')      || n('Salt (g)')     || n('salt'),
-      potassium: n('カリウム（mg）') || n('Potassium (mg)') || n('potassium'),
+      calories:  num('カロリー (kcal)'),
+      protein:   num('タンパク質 (g)'),
+      fat:       num('脂肪 (g)'),
+      carbs:     num('炭水化物 (g)'),
+      fiber:     num('繊維 (g)'),
+      sugar:     num('糖分（g）'),
+      salt:      num('塩分（g）'),
+      potassium: num('カリウム（mg）'),
     },
     estimatedPeople: peopleCategory,
-    cuisineType: row['CUISINE'] || row['料理'] || row['カテゴリ'] || '',
+    cuisineType: get('CUISINE') || get('料理'),
     peopleCategory,
-    diningCompanion: row['Dining Companion'] || row['食事の相手'] || '',
+    diningCompanion: get('Dining Companion') || get('食事の相手'),
   };
 }
 
@@ -100,7 +138,23 @@ async function fetchMarket(market: string): Promise<FoodPhoto[]> {
     if (!res.ok) return [];
     const text = await res.text();
     if (!text || text.length < 100) return [];
-    return parseCSV(text).map(r => toPhoto(r, market));
+
+    const allRows = parseCSVRaw(text);
+    if (allRows.length < 3) return [];
+
+    // Row 0 = EN headers, Row 1 = JP headers, Row 2+ = data
+    const enRow = allRows[0];
+    const jpRow = allRows[1];
+    const colMap = mergeColMaps(enRow, jpRow);
+
+    const photos: FoodPhoto[] = [];
+    for (let i = 2; i < allRows.length; i++) {
+      const cells = allRows[i];
+      if (!cells || cells.every(c => !c.trim())) continue;
+      const photo = toPhoto(cells, colMap, market);
+      if (photo && photo.seq > 0) photos.push(photo);
+    }
+    return photos;
   } catch {
     return [];
   }
@@ -110,18 +164,12 @@ export async function GET(req: NextRequest) {
   const market = req.nextUrl.searchParams.get('market')?.toUpperCase();
 
   if (market && SHEET_URLS[market]) {
-    try {
-      const res = await fetch(SHEET_URLS[market], { cache: 'no-store' });
-      if (!res.ok) return NextResponse.json({ error: `Sheet fetch failed: ${res.status}` }, { status: 500 });
-      const rows = parseCSV(await res.text());
-      return NextResponse.json(rows);
-    } catch (e) {
-      return NextResponse.json({ error: String(e) }, { status: 500 });
-    }
+    const photos = await fetchMarket(market);
+    return NextResponse.json(photos);
   }
 
   const countries: Record<string, FoodPhoto[]> = {};
-  for (const m of ['JP','SG','MY','ID','PH']) {
+  for (const m of ['JP', 'SG', 'MY', 'ID', 'PH']) {
     const photos = await fetchMarket(m);
     if (photos.length > 0) countries[m] = photos;
     await new Promise(r => setTimeout(r, 200));
