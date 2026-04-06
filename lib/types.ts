@@ -7,5 +7,6 @@ export interface MealRecord {
   servings: number; cuisine: string; companion: string;
 }
 export interface Filters {
-  markets: string[]; cuisine: string; companion: string; sex: string; minCal: number; maxCal: number;
+  markets: string[]; cuisine: string; companion: string; sex: string;
+  marriage: string; child: string; minCal: number; maxCal: number;
 }
