@@ -1,40 +1,69 @@
-'use client';
-import { MealRecord } from '@/lib/types';
-interface Props { record: MealRecord; marketColors: Record<string, string>; marketLabels: Record<string, string>; onClose: () => void; }
-const NRow = ({ label, value, unit }: { label: string; value: number; unit: string }) =>
-  value > 0 ? <div className="flex justify-between text-sm"><span className="text-gray-400">{label}</span><span className="text-white font-medium">{Math.round(value * 10) / 10} {unit}</span></div> : null;
-export default function PhotoModal({ record: r, marketColors, marketLabels, onClose }: Props) {
+"use client";
+import { useState } from "react";
+import { FoodPhoto, AnalysisResult } from "@/types";
+import Image from "next/image";
+import { Lang, t, countryNames } from "@/lib/i18n";
+interface Props { photo: FoodPhoto; onClose: () => void; lang: Lang; }
+export default function PhotoModal({ photo, onClose, lang }: Props) {
+  const [analyzing, setAnalyzing] = useState(false);
+  const [result, setResult] = useState<AnalysisResult|null>(null);
+  const [err, setErr] = useState<string|null>(null);
+  const dn = result?.nutrition??photo.nutrition, dc = result?.colors??photo.colors, dct = result?.cuisineType??photo.cuisineType, dp = result?.estimatedPeople??photo.estimatedPeople;
+  const hs = result?.healthScore??photo.healthScore??0;
+  const hc = hs>=7?"text-green-500":hs>=4?"text-yellow-500":"text-red-500";
+  const maxN = Math.max(dn.protein,dn.fat,dn.carbs,1);
+  const runAnalysis = async () => {
+    setAnalyzing(true); setErr(null);
+    try {
+      const res = await fetch("/api/analyze",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({imageUrl:photo.photoUrl})});
+      const json = await res.json();
+      if (json.error) setErr(json.error); else setResult(json.result);
+    } catch(e) { setErr(String(e)); }
+    setAnalyzing(false);
+  };
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-gray-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" onClick={e => e.stopPropagation()}>
-        <div className="relative">
-          <img src={r.photoUrl} alt={r.seq} className="w-full h-64 object-cover rounded-t-2xl" />
-          <button onClick={onClose} className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80">✕</button>
-          <span className="absolute top-3 left-3 text-xs font-bold px-2 py-1 rounded-full text-white" style={{ background: marketColors[r.country] }}>{marketLabels[r.country]}</span>
-          {r.colors.length > 0 && <div className="absolute bottom-0 left-0 right-0 h-2 flex">{r.colors.map((c, i) => <div key={i} className="flex-1" style={{ background: c }} />)}</div>}
-        </div>
-        <div className="p-5 space-y-4">
-          <div className="flex flex-wrap gap-2">
-            {[r.cuisine, r.companion && `With: ${r.companion}`, r.sex, r.age && `Age ${r.age}`, r.marriage].filter(Boolean).map((tag, i) => (
-              <span key={i} className="text-xs bg-gray-800 text-gray-300 px-2 py-0.5 rounded-full">{tag}</span>
-            ))}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={onClose}>
+      <div className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto" onClick={e=>e.stopPropagation()}>
+        <button onClick={onClose} className="absolute top-4 right-4 z-10 w-10 h-10 bg-[#E8493F] text-white rounded-full flex items-center justify-center hover:bg-[#d43d33] text-xl font-bold">&times;</button>
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-1/2">
+            <div className="bg-[#E8493F] text-white px-4 py-2 text-sm font-semibold rounded-tl-2xl rounded-tr-2xl md:rounded-tr-none">{t.image[lang]}</div>
+            <div className="relative aspect-[4/3] w-full"><Image src={photo.photoUrl} alt={photo.description} fill className="object-cover" unoptimized /></div>
+            <div className="p-3 border-t">
+              <button onClick={runAnalysis} disabled={analyzing} className="w-full py-2 bg-gradient-to-r from-[#E8493F] to-[#FF6B5A] text-white rounded-lg text-sm font-semibold hover:shadow-lg disabled:opacity-50">{analyzing?t.analyzing[lang]:result?t.reanalyze[lang]:t.analyze[lang]}</button>
+              {err&&<p className="text-xs text-red-500 mt-1">{err}</p>}
+              {result&&<p className="text-xs text-green-500 mt-1">{t.analysisComplete[lang]}</p>}
+            </div>
           </div>
-          {r.description && <div><p className="text-xs text-gray-400 uppercase font-medium mb-1">Meal Description</p><p className="text-sm text-gray-200 leading-relaxed">{r.description}</p></div>}
-          {r.analysis && <div><p className="text-xs text-gray-400 uppercase font-medium mb-1">Food Analysis</p><p className="text-sm text-gray-200 leading-relaxed">{r.analysis}</p></div>}
-          {r.calories > 0 && (
-            <div className="bg-gray-800 rounded-xl p-4 space-y-2">
-              <p className="text-xs text-gray-400 uppercase font-medium mb-2">Nutrition</p>
-              <NRow label="Calories" value={r.calories} unit="kcal" /><NRow label="Protein" value={r.protein} unit="g" />
-              <NRow label="Fat" value={r.fat} unit="g" /><NRow label="Carbs" value={r.carbs} unit="g" />
-              <NRow label="Sugar" value={r.sugar} unit="g" /><NRow label="Salt" value={r.salt} unit="g" />
-              <NRow label="Fiber" value={r.fiber} unit="g" /><NRow label="Weight" value={r.weight} unit="g" />
+          <div className="md:w-1/2 p-5 flex flex-col gap-4">
+            <div className="bg-[#E8493F] text-white px-4 py-2 text-sm font-semibold rounded-lg">{t.info[lang]}</div>
+            <div className="grid grid-cols-2 gap-2 text-sm">
+              {[["country",countryNames[photo.country]?.[lang]??photo.country],["genderLabel",photo.sex],["ageLabel",`${photo.age}${lang==="ja"?"歳":""}`],["marriageLabel",photo.marriage],["childLabel",photo.child],["areaLabel",photo.residence]].map(([k,v])=>(
+                <div key={k as string}><span className="text-gray-400 text-xs">{t[k as keyof typeof t][lang]}</span><p className="font-semibold">{v}</p></div>
+              ))}
             </div>
-          )}
-          {r.colors.length > 0 && (
-            <div><p className="text-xs text-gray-400 uppercase font-medium mb-2">Dominant Colors</p>
-              <div className="flex gap-2">{r.colors.map((c, i) => <div key={i} className="flex flex-col items-center gap-1"><div className="w-8 h-8 rounded-lg" style={{ background: c }} /><span className="text-[9px] text-gray-500">{c}</span></div>)}</div>
+            <div><span className="text-gray-400 text-xs">{t.comment[lang]}</span><p className="text-sm font-medium text-[#E8493F] mt-1 whitespace-pre-line">{photo.description}</p></div>
+            {result?.description&&<div><span className="text-gray-400 text-xs">{t.aiDescription[lang]}</span><p className="text-sm font-medium text-gray-700 mt-1">{result.description}</p></div>}
+            {result?.ingredients&&<div><span className="text-gray-400 text-xs">{t.ingredients[lang]}</span><div className="flex flex-wrap gap-1 mt-1">{result.ingredients.map((ing,i)=><span key={i} className="px-2 py-0.5 bg-gray-100 rounded-full text-xs text-gray-600">{ing}</span>)}</div></div>}
+            <div className="flex items-center gap-3 flex-wrap">
+              <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold">{dct}</span>
+              {hs>0&&<span className={`text-sm font-bold ${hc}`}>{t.health[lang]}: {hs}/10</span>}
+              <span className="text-xs text-gray-400">{dp}{t.people[lang]} / {result?.plateCount??"?"} {t.plates[lang]}</span>
             </div>
-          )}
+            <div><span className="text-gray-400 text-xs block mb-2">{t.colorPalette[lang]}</span><div className="flex gap-1.5">{dc.slice(0,7).map((c,i)=><div key={i} className="w-8 h-8 rounded-full border-2 border-white shadow-md" style={{backgroundColor:c}} title={c} />)}</div></div>
+            <div>
+              <span className="text-gray-400 text-xs block mb-2">{t.nutrition[lang]} ({dn.calories} kcal)</span>
+              <div className="space-y-1.5">
+                {[{l:t.protein[lang],v:dn.protein,c:"#E8493F"},{l:t.fat[lang],v:dn.fat,c:"#F59E0B"},{l:t.carbs[lang],v:dn.carbs,c:"#9CA3AF"},{l:t.fiber[lang],v:dn.fiber,c:"#10B981"},{l:t.sugar[lang],v:dn.sugar,c:"#EC4899"},{l:t.salt[lang],v:dn.salt,c:"#6B7280"}].map(n=>(
+                  <div key={n.l} className="flex items-center gap-2">
+                    <span className="text-xs w-16 text-gray-500">{n.l}</span>
+                    <div className="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden"><div className="h-full rounded-full" style={{width:`${Math.min(100,(n.v/maxN)*100)}%`,backgroundColor:n.c}} /></div>
+                    <span className="text-xs w-12 text-right text-gray-600">{n.v}g</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

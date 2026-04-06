@@ -1,26 +1,48 @@
-'use client';
-import { MealRecord } from '@/lib/types';
-interface Props { photos: MealRecord[]; marketColors: Record<string, string>; onSelect: (r: MealRecord) => void; }
-export default function PhotoGrid({ photos, marketColors, onSelect }: Props) {
-  if (!photos.length) return <div className="flex items-center justify-center h-full text-gray-500">No meals match your filters.</div>;
+"use client";
+import { useRef, useState, useEffect, useMemo } from "react";
+import { FoodPhoto } from "@/types";
+import PhotoCard from "./PhotoCard";
+interface Props { photos: FoodPhoto[]; onPhotoClick: (p: FoodPhoto) => void; }
+export default function PhotoGrid({ photos, onPhotoClick }: Props) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [containerSize, setContainerSize] = useState({ w: 800, h: 600 });
+  useEffect(() => {
+    const update = () => { if (containerRef.current) setContainerSize({ w: containerRef.current.clientWidth, h: containerRef.current.clientHeight }); };
+    update(); window.addEventListener("resize", update); return () => window.removeEventListener("resize", update);
+  }, []);
+  const { size, step, cols } = useMemo(() => {
+    const count = photos.length;
+    let s = count<=20?120:count<=50?100:count<=100?80:count<=200?65:count<=350?55:48;
+    const maxSize = Math.floor((containerSize.w-20)/4.5);
+    s = Math.max(32, Math.min(s, maxSize));
+    const st = s+4;
+    const c = Math.max(4, Math.floor((containerSize.w-s)/st));
+    return { size: s, step: st, cols: c };
+  }, [photos.length, containerSize]);
+  const positions = useMemo(() => {
+    const result: { x:number; y:number; photo:FoodPhoto }[] = [];
+    let row=0, idx=0; const pad=size/2, vStep=step*0.5;
+    while (idx < photos.length) {
+      const isOffset = row%2===1;
+      const itemsInRow = isOffset?cols-1:cols;
+      for (let col=0; col<itemsInRow && idx<photos.length; col++) {
+        result.push({ x:pad+col*step+(isOffset?step/2:0), y:pad+row*vStep, photo:photos[idx] });
+        idx++;
+      }
+      row++;
+    }
+    return { items: result, rows: row };
+  }, [photos, size, step, cols]);
+  const pad=size/2, totalHeight=pad+positions.rows*(step*0.5)+size+pad, totalWidth=pad+cols*step+pad;
   return (
-    <div className="p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-2">
-      {photos.map(r => (
-        <button key={r.seq + r.photoUrl} onClick={() => onSelect(r)}
-          className="group relative aspect-square rounded-xl overflow-hidden bg-gray-800 hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-red-500">
-          <img src={r.photoUrl} alt={r.seq} className="w-full h-full object-cover" loading="lazy" onError={e => { (e.target as HTMLImageElement).src = ''; }} />
-          <span className="absolute top-1.5 left-1.5 text-[10px] font-bold px-1.5 py-0.5 rounded-full text-white shadow" style={{ background: marketColors[r.country] || '#666' }}>{r.country}</span>
-          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-2">
-            <p className="text-white text-[10px] font-medium leading-tight line-clamp-2">{r.cuisine}</p>
-            {r.calories > 0 && <p className="text-yellow-300 text-[10px] mt-0.5">{Math.round(r.calories)} kcal</p>}
+    <div ref={containerRef} className="flex-1 overflow-auto">
+      <div className="relative mx-auto transition-all duration-300" style={{ width:`${totalWidth}px`, height:`${totalHeight}px` }}>
+        {positions.items.map(({ x, y, photo }, i) => (
+          <div key={`${photo.country}-${photo.seq}`} className="absolute transition-all duration-300" style={{ left:`${x}px`, top:`${y}px`, width:`${size}px`, height:`${size}px` }}>
+            <PhotoCard photo={photo} onClick={onPhotoClick} index={i} size={size} />
           </div>
-          {r.colors.length > 0 && (
-            <div className="absolute bottom-0 left-0 right-0 h-1 flex">
-              {r.colors.slice(0, 5).map((c, i) => <div key={i} className="flex-1" style={{ background: c }} />)}
-            </div>
-          )}
-        </button>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
