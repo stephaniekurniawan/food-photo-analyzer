@@ -62,7 +62,8 @@ function toPhoto(row: Record<string, string>, country: string): FoodPhoto {
     filename: row['Q33'] || '',
     description: row['Q34_JP'] || row['Q34_EN'] || '',
     analysisText: '',
-    photoUrl: row['\u5199\u771fURL'] || '',
+    photoUrl: row['\u5199\u771fURL'] ||
+      (row['Q33'] ? `https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/${row['Q33']}` : ''),
     colors,
     nutrition: {
       calories: n('\u30ab\u30ed\u30ea\u30fc (kcal)'),
