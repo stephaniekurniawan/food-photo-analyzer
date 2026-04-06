@@ -9,23 +9,38 @@ import { MealRecord, Filters } from '@/lib/types';
 const MARKETS = ['SG', 'ID', 'JP', 'MY', 'PH'] as const;
 const MARKET_LABELS: Record<string, string> = { SG: 'Singapore', ID: 'Indonesia', JP: 'Japan', MY: 'Malaysia', PH: 'Philippines' };
 const MARKET_COLORS: Record<string, string> = { SG: '#E8493F', ID: '#378ADD', JP: '#1D9E75', MY: '#BA7517', PH: '#7F77DD' };
+const BASE_URL = 'https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/';
 
 function rowToRecord(row: Record<string, string>, market: string): MealRecord | null {
-  const photoUrl = row['写真URL']?.trim();
-  if (!photoUrl) return null;
+  const filename = (row['写真URL'] || row['Q33'])?.trim();
+  if (!filename) return null;
+  const photoUrl = filename.startsWith('http') ? filename : BASE_URL + filename;
   return {
-    seq: row['SEQ'] || '', country: market, residence: row['居住地'] || row['RESIDENCE'] || '',
-    sex: row['性別'] || row['SEX'] || '', age: parseInt(row['年齢'] || row['AGE'] || '0') || 0,
-    income: row['世帯 収入'] || row['HINCOME'] || '', marriage: row['未既婚'] || row['MARRIAGE'] || '',
-    child: row['子どもの有無'] || row['CHILD'] || '', job: row['職業'] || row['JOB'] || '',
-    description: row['Q33'] || '', analysis: row['Q34_JP'] || '',
-    photoUrl, colors: [row['カラー１'], row['カラー２'], row['カラー３'], row['カラー４'], row['カラー５'], row['カラー６'], row['カラー７']].filter(Boolean),
-    weight: parseFloat(row['容量（g）'] || '0') || 0, sugar: parseFloat(row['糖分（g）'] || '0') || 0,
-    salt: parseFloat(row['塩分（g）'] || '0') || 0, potassium: parseFloat(row['カリウム（mg）'] || '0') || 0,
-    calories: parseFloat(row['カロリー (kcal)'] || '0') || 0, protein: parseFloat(row['タンパク質 (g)'] || '0') || 0,
-    fat: parseFloat(row['脂肪 (g)'] || '0') || 0, carbs: parseFloat(row['炭水化物 (g)'] || '0') || 0,
-    fiber: parseFloat(row['繊維 (g)'] || '0') || 0, servings: parseFloat(row['推定人数'] || '1') || 1,
-    cuisine: row['カテゴリ'] || '', companion: row['食事の相手'] || '',
+    seq: row['SEQ'] || '',
+    country: market,
+    residence: row['居住地'] || row['RESIDENCE'] || '',
+    sex: row['性別'] || row['SEX'] || '',
+    age: parseInt(row['年齢'] || row['AGE'] || '0') || 0,
+    income: row['世帯 収入'] || row['HINCOME'] || '',
+    marriage: row['未既婚'] || row['MARRIAGE'] || '',
+    child: row['子どもの有無'] || row['CHILD'] || '',
+    job: row['職業'] || row['JOB'] || '',
+    description: row['Q33'] || '',
+    analysis: row['Q34_JP'] || '',
+    photoUrl,
+    colors: [row['カラー１'], row['カラー２'], row['カラー３'], row['カラー４'], row['カラー５'], row['カラー６'], row['カラー７']].filter(Boolean),
+    weight: parseFloat(row['容量（g）'] || '0') || 0,
+    sugar: parseFloat(row['糖分（g）'] || '0') || 0,
+    salt: parseFloat(row['塩分（g）'] || '0') || 0,
+    potassium: parseFloat(row['カリウム（mg）'] || '0') || 0,
+    calories: parseFloat(row['カロリー (kcal)'] || '0') || 0,
+    protein: parseFloat(row['タンパク質 (g)'] || '0') || 0,
+    fat: parseFloat(row['脂肪 (g)'] || '0') || 0,
+    carbs: parseFloat(row['炭水化物 (g)'] || '0') || 0,
+    fiber: parseFloat(row['繊維 (g)'] || '0') || 0,
+    servings: parseFloat(row['推定人数'] || '1') || 1,
+    cuisine: row['カテゴリ'] || '',
+    companion: row['食事の相手'] || row[''] || '',
   };
 }
 
