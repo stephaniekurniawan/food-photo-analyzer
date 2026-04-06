@@ -22,10 +22,10 @@ function splitCSVLine(line: string): string[] {
 
 function parseCSV(text: string): Record<string, string>[] {
   const lines = text.trim().split('\n');
-  // Find the header row - the one containing 写真URL
+  // Find the header row containing SEQ
   let headerIdx = 0;
   for (let i = 0; i < Math.min(10, lines.length); i++) {
-    if (lines[i].includes('写真URL') || lines[i].includes('SEQ')) {
+    if (lines[i].includes('SEQ') && lines[i].includes('COUNTRY')) {
       headerIdx = i;
       break;
     }
@@ -35,7 +35,6 @@ function parseCSV(text: string): Record<string, string>[] {
   const results: Record<string, string>[] = [];
   for (let i = headerIdx + 1; i < lines.length; i++) {
     const vals = splitCSVLine(lines[i]);
-    // Only include rows that have a SEQ number (skip empty/description rows)
     const row = Object.fromEntries(headers.map((h, j) => [h, vals[j] ?? '']));
     const seq = row['SEQ']?.trim();
     if (seq && /^\d+$/.test(seq)) {
