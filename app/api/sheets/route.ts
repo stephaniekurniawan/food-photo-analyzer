@@ -43,12 +43,25 @@ function parseCSV(text: string): Record<string, string>[] {
 
 function toPhoto(row: Record<string, string>, country: string): FoodPhoto {
   const n = (k: string) => parseFloat(row[k] || '0') || 0;
-  const colors = [1,2,3,4,5,6,7].map(i => row[`\u30ab\u30e9\u30fc${i}`] || '').filter(Boolean);
-  const age = parseInt((row['AGE'] || '0').replace(/\D/g, '')) || 0;
-  const companion = row['\u98df\u4e8b\u306e\u76f8\u624b'] || '\u81ea\u5206';
-  const peopleRaw = row['\u63a8\u5b9a\u4eba\u6570'] || '1';
-  const peopleNum = parseInt(peopleRaw.replace(/\D/g, '')) || 1;
-  const peopleCategory = peopleNum >= 4 ? '4\u4eba\u4ee5\u4e0a' : peopleNum === 3 ? '3\u4eba' : peopleNum === 2 ? '2\u4eba' : '1\u4eba';
+  const ageStr = row['AGE'] || '';
+  const age = parseInt(ageStr) || 0;
+
+  // Estimated people: raw number in the unnamed "" column, or from "Estimated Number" column
+  const rawNum = parseInt(row[''] || '0') || 0;
+  const estNumStr = row['Estimated Number'] || row['推定人数カテゴリ'] || '';
+  const peopleNum = rawNum || (estNumStr.includes('4') ? 4 : estNumStr.includes('3') ? 3 : estNumStr.includes('2') ? 2 : estNumStr.includes('1') ? 1 : 0);
+  const peopleCategory = estNumStr || (peopleNum >= 4 ? '4人以上' : peopleNum === 3 ? '3人' : peopleNum === 2 ? '2人' : peopleNum === 1 ? '1人' : '');
+
+  // Colors from カラー１〜７ columns
+  const colors: string[] = [];
+  for (let i = 1; i <= 7; i++) {
+    const c = (row[`カラー${i}`] || row[`Color${i}`] || row[`color${i}`] || '').trim();
+    if (c && c !== '0' && c.startsWith('#')) colors.push(c);
+  }
+
+  // Photo URL: 写真URL column or construct from Q33 filename
+  const photoUrl = row['写真URL'] || row['Photo URL'] || (row['Q33'] ? `https://food-img.s3.ap-northeast-1.amazonaws.com/${country.toLowerCase()}/${row['Q33']}` : '');
+
   return {
     seq: parseInt(row['SEQ'] || '0') || 0,
     country,
@@ -62,23 +75,22 @@ function toPhoto(row: Record<string, string>, country: string): FoodPhoto {
     filename: row['Q33'] || '',
     description: row['Q34_JP'] || row['Q34_EN'] || '',
     analysisText: '',
-    photoUrl: row['\u5199\u771fURL'] ||
-      (row['Q33'] ? `https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/${row['Q33']}` : ''),
+    photoUrl,
     colors,
     nutrition: {
-      calories: n('\u30ab\u30ed\u30ea\u30fc (kcal)'),
-      protein: n('\u30bf\u30f3\u30d1\u30af\u8cac (g)'),
-      fat: n('\u8106\u80aa (g)'),
-      carbs: n('\u708e\u6c34\u5316\u7269 (g)'),
-      fiber: n('\u7e4a\u7dad (g)'),
-      sugar: n('\u7cd6\u5206\uff08g\uff09'),
-      salt: n('\u5869\u5206\uff08g\uff09'),
-      potassium: n('\u30ab\u30ea\u30a6\u30e0\uff08mg\uff09'),
+      calories:  n('カロリー (kcal)') || n('Calories (kcal)') || n('calories'),
+      protein:   n('タンパク質 (g)') || n('Protein (g)') || n('protein'),
+      fat:       n('脂肪 (g)')       || n('Fat (g)')      || n('fat'),
+      carbs:     n('炭水化物 (g)')   || n('Carbs (g)')    || n('carbs'),
+      fiber:     n('繊維 (g)')       || n('Fiber (g)')    || n('fiber'),
+      sugar:     n('糖分（g）')      || n('Sugar (g)')    || n('sugar'),
+      salt:      n('塩分（g）')      || n('Salt (g)')     || n('salt'),
+      potassium: n('カリウム（mg）') || n('Potassium (mg)') || n('potassium'),
     },
-    estimatedPeople: peopleNum,
-    cuisineType: row['\u30ab\u30c6\u30b4\u30ea'] || '',
+    estimatedPeople: peopleCategory,
+    cuisineType: row['CUISINE'] || row['料理'] || row['カテゴリ'] || '',
     peopleCategory,
-    diningCompanion: companion,
+    diningCompanion: row['Dining Companion'] || row['食事の相手'] || '',
   };
 }
 
