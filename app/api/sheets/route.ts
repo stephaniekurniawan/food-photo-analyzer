@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import type { FoodPhoto } from '@/types';
 
 const SHEET_URLS: Record<string, string> = {
@@ -14,7 +14,9 @@ function parseCSV(text: string): Record<string, string>[] {
   let headerIdx = -1;
   for (let i = 0; i < Math.min(lines.length, 5); i++) {
     const u = lines[i].toUpperCase();
-    if (u.includes('SEQ') && (u.includes('COUNTRY') || u.includes('写真URL'))) { headerIdx = i; break; }
+    if (u.includes('SEQ') && (u.includes('COUNTRY') || u.includes('\u5199\u771fURL'))) {
+      headerIdx = i; break;
+    }
   }
   if (headerIdx < 0) return [];
   const parseRow = (line: string) => {
@@ -41,53 +43,81 @@ function parseCSV(text: string): Record<string, string>[] {
 
 function toPhoto(row: Record<string, string>, country: string): FoodPhoto {
   const n = (k: string) => parseFloat(row[k] || '0') || 0;
-  const colors = [1,2,3,4,5,6,7].map(i => row[`カラー${i}`] || '').filter(Boolean);
-  const age = parseInt((row['AGE'] || row['年齢'] || '0').replace(/\D/g, '')) || 0;
-  const companion = row['食事の相手'] || row['diningCompanion'] || '自分';
-  const peopleRaw = row['推定人数'] || row['estimatedPeople'] || '1';
+  const colors = [1,2,3,4,5,6,7].map(i => row[`\u30ab\u30e9\u30fc${i}`] || '').filter(Boolean);
+  const age = parseInt((row['AGE'] || '0').replace(/\D/g, '')) || 0;
+  const companion = row['\u30ab\u30b9\u98df\u4e8b\u306e\u76f8\u624b'] || '\u81ea\u5206';
+  const peopleRaw = row['\u63a8\u5b9a\u4eba\u6570'] || '1';
   const peopleNum = parseInt(peopleRaw.replace(/\D/g, '')) || 1;
-  let peopleCategory = '1人';
-  if (peopleNum >= 4) peopleCategory = '4人以上';
-  else if (peopleNum === 3) peopleCategory = '3人';
-  else if (peopleNum === 2) peopleCategory = '2人';
+  const peopleCategory = peopleNum >= 4 ? '4\u4eba\u4ee5\u4e0a' : peopleNum === 3 ? '3\u4eba' : peopleNum === 2 ? '2\u4eba' : '1\u4eba';
   return {
     seq: parseInt(row['SEQ'] || '0') || 0,
     country,
-    residence: row['RESIDENCE'] || row['居住地'] || '',
-    sex: row['SEX'] || row['性別'] || '',
+    residence: row['RESIDENCE'] || '',
+    sex: row['SEX'] || '',
     age,
-    income: row['HINCOME'] || row['収入'] || '',
-    marriage: row['MARRIAGE'] || row['婚姻'] || '',
-    child: row['CHILD'] || row['子供'] || '',
-    job: row['JOB'] || row['職業'] || '',
+    income: row['HINCOME'] || '',
+    marriage: row['MARRIAGE'] || '',
+    child: row['CHILD'] || '',
+    job: row['JOB'] || '',
     filename: row['Q33'] || '',
-    description: row['Q34_JP'] || row['Q34_EN'] || row['説明'] || '',
-    analysisText: row['分析'] || '',
-    photoUrl: row['写真URL'] || '',
+    description: row['Q34_JP'] || row['Q34_EN'] || '',
+    analysisText: '',
+    photoUrl: row['\u5199\u771fURL'] || '',
     colors,
     nutrition: {
-      calories: n('カロリー (kcal)'), protein: n('タンパク質 (g)'),
-      fat: n('脂肪 (g)'), carbs: n('炭水化物 (g)'),
-      fiber: n('繊維 (g)'), sugar: n('糖分（g）'),
-      salt: n('塩分（g）'), potassium: n('カリウム（mg）'),
+      calories: n('\u30ab\u30ed\u30ea\u30fc (kcal)'),
+      protein: n('\u30bf\u30f3\u30d1\u30af\u8cac (g)'),
+      fat: n('\u8106\u80aa (g)'),
+      carbs: n('\u708e\u6c34\u5316\u7269 (g)'),
+      fiber: n('\u7e4a\u7dad (g)'),
+      sugar: n('\u7cd6\u5206\uff08g\uff09'),
+      salt: n('\u5869\u5206\uff08g\uff09'),
+      potassium: n('\u30ab\u30ea\u30a6\u30e0\uff08mg\uff09'),
     },
     estimatedPeople: peopleNum,
-    cuisineType: row['カテゴリ'] || row['cuisineType'] || '',
+    cuisineType: row['\u30ab\u30c6\u30b4\u30ea'] || '',
     peopleCategory,
     diningCompanion: companion,
   };
 }
 
-export async function GET() {
-  const MARKETS = ['JP','SG','MY','ID','PH'];
-  const countries: Record<string, FoodPhoto[]> = {};
-  await Promise.all(MARKETS.map(async m => {
+async function fetchMarket(market: string): Promise<FoodPhoto[]> {
+  try {
+    const res = await fetch(SHEET_URLS[market], {
+      cache: 'no-store',
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+    });
+    if (!res.ok) return [];
+    const text = await res.text();
+    if (!text || text.length < 100) return [];
+    return parseCSV(text).map(r => toPhoto(r, market));
+  } catch {
+    return [];
+  }
+}
+
+export async function GET(req: NextRequest) {
+  const market = req.nextUrl.searchParams.get('market')?.toUpperCase();
+
+  if (market && SHEET_URLS[market]) {
     try {
-      const res = await fetch(SHEET_URLS[m], { next: { revalidate: 300 } });
-      if (!res.ok) return;
+      const res = await fetch(SHEET_URLS[market], {
+        cache: 'no-store',
+        headers: { 'User-Agent': 'Mozilla/5.0' },
+      });
+      if (!res.ok) return NextResponse.json({ error: `Sheet fetch failed: ${res.status}` }, { status: 500 });
       const rows = parseCSV(await res.text());
-      countries[m] = rows.map(r => toPhoto(r, m));
-    } catch { /* skip */ }
-  }));
+      return NextResponse.json(rows);
+    } catch (e) {
+      return NextResponse.json({ error: String(e) }, { status: 500 });
+    }
+  }
+
+  const countries: Record<string, FoodPhoto[]> = {};
+  for (const m of ['JP','SG','MY','ID','PH']) {
+    const photos = await fetchMarket(m);
+    if (photos.length > 0) countries[m] = photos;
+    await new Promise(r => setTimeout(r, 300));
+  }
   return NextResponse.json({ countries });
 }
