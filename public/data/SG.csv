@@ -1,0 +1,1619 @@
+SEQ,COUNTRY,RESIDENCE,SEX,AGE,HINCOME,,MARRIAGE,CHILD,JOB,Q33,Q34_JP,,,,,,,,,,,,,,,,,,,,,,,
+,国,居住地,性別,年齢,"世帯
+収入",HML,未既婚,子どもの有無,職業,最近の、あなたの「食事の風景」,"写真の説明（和訳）
+・撮影した食事　・撮影した時期　・時間帯
+・どこで　・誰と　・何をしながら　・何を食べたか
+・誰が作った料理か、あるいは、どこで買った料理か","写真の内容（栄養成分＆メイン色）
+""Simply discribe food, tell it's ingredients and estimate total nutrients(numerical), plate counts, main colors of food(HTML color codes)""",写真URL,写真,カラー１,カラー２,カラー３,カラー４,カラー５,カラー６,カラー７,容量（g）,糖分（g）,塩分（g）,カリウム（mg）,カロリー (kcal),タンパク質 (g),脂肪 (g),炭水化物 (g),繊維 (g),推定人数,料理,推定人数カテゴリ,食事の相手
+723,SG,北西地区,男性,17歳,"S$ 100,000 - 124,999",2,未婚,いない,無職,SEQ0723_1.webp,"夕食
+1月8日に撮影
+午後9時
+ホットトマト（レストラン）で撮影
+友人と一緒に
+サッカーをした後
+パスタを食べた",ペンネ・ボロネーゼ。牛挽き肉のトマトミートソースをペンネパスタに絡め、パルメザンチーズとルッコラをトッピング。ガーリックブレッドとトマトスープが付け合わせ。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0723_1.webp,,#C0392B,#E8A045,#2ECC71,#F5DEB3,#D4A017,#8B4513,#3498DB,450,9,2.8,680,720,32,22,95,6,1,洋食,2人,友達
+724,SG,南西地区,男性,18歳,"S$ 125,000 - 149,999",2,未婚,いない,大学生（短大含む）、高専生、大学院生,SEQ0724_1.webp,"夕食
+2024年1月17日
+午後8時
+自宅で
+家族
+食事の準備をしている
+寿司
+買ってきた",サーモン寿司盛り合わせ。サーモン刺身、サーモン軍艦（イクラトッピング）、サーモン巻き、エビマヨロール等を含む豪華なセット。新鮮なサーモンとシャリを使用。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0724_1.webp,,#E8724A,#F4A460,#FFFFFF,#1C1C1C,#FF4500,#90EE90,#F5F5DC,650,12,4.8,980,720,48,22,82,2,2,和食,3人,家族
+725,SG,シンガポール中央地区,男性,18歳,"S$ 150,000 - 199,999",3,未婚,いない,専門学校生,SEQ0725_1.webp,母が作った夕食。1週間前の写真。自宅で食べた,左皿は濃い醤油ベースのタレで煮込んだ鶏手羽（紅焼鶏翅）、右皿はレンコンと緑ピーマン・唐辛子を炒めた蓮藕炒め。どちらも中国家庭料理の定番で、艶やかな濃い茶色と白いレンコンの穴が特徴的。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0725_1.webp,,#8B2500,#C4470A,#F5F0E8,#6B8E4E,#D4B483,#3D2B1F,#E8DCC8,650,18,4.2,980,720,42,32,58,6.5,2,伝統ローカル料理,2人,家族
+726,SG,北東地区,男性,19歳,"S$ 125,000 - 149,999",2,未婚,いない,サービス業（理容師、運転手など）,SEQ0726_1.webp,軍にいる友人と旅行したときに食べたおやつ兼朝食。眠気覚ましとエネルギー補給のためにケーキとカフェラテ,バタースポンジケーキの一切れとアイスカフェラテのセット。ケーキは黄金色でふんわりとした食感、コーヒーはミルクと氷が入ったシンガポール風カフェスタイル。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0726_1.webp,,#F4C84A,#8B5E3C,#D4A96A,#4A7C59,#C8D8C0,#F5F0E8,#B8860B,320,28,0.6,220,520,7,22,72,1.2,1,洋食,2人,友達
+727,SG,シンガポール中央地区,男性,20歳,"S$ 200,000 or more",3,未婚,いない,自由業、専門職（医者、弁護士など）,SEQ0727_1.webp,数日前に家族と一緒に食べたランチ。アストンズ（レストラン）にて、レモンライムチキンと、サイドディッシュにポテトサラダとマッシュポテト,グリルチキンにグレービーソースをかけ、マッシュポテト（グレービー添え）、赤みじゃがいものポテトサラダ、レモンを添えた西洋風プレート。炭火焼きの焦げ目が特徴的。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0727_1.webp,,#8B4513,#D2691E,#F5F5DC,#FFFACD,#C8A96E,#F0E68C,#A0522D,550,8,2.8,920,720,48,32,52,4,1,洋食,3人,家族
+728,SG,北西地区,男性,20歳,"S$ 150,000 - 199,999",3,未婚,いない,高校生、浪人生,SEQ0728_1.webp,夕食時に友人と外食した際に撮った写真,トンカツ定食セット。揚げた豚カツ・エビフライをメインに、白米、味噌汁、千切りキャベツ、レモン添え。パン粉揚げの衣がサクサクの日本式揚げ物定食。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0728_1.webp,,#C4922A,#F5F0E8,#2C2C2C,#8B6914,#E8D5B7,#4A7C3F,#F4C430,1800,18,5.2,980,1650,72,68,195,8,3,和食,2人,友達
+729,SG,北東地区,男性,21歳,"S$ 125,000 - 149,999",2,既婚,いない,自由業、専門職（医者、弁護士など）,SEQ0729_1.webp,ポークリブは好物なので、母と一緒に大盛りを食べた,濃厚な甘辛タレで絡めた豚スペアリブ。揚げてからソースで煮絡めた料理で、レタスの上に盛り付けられている。外はカリッと中は柔らかい食感。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0729_1.webp,,#8B2500,#5C1A00,#4A7C3F,#C4601A,#D4A96A,#2D1A0E,#F5F0EB,350,18,2.8,520,580,32,38,24,1.5,1,洋食,1人,家族
+730,SG,南東地区,男性,22歳,"S$ 150,000 - 199,999",3,未婚,いない,大学生（短大含む）、高専生、大学院生,SEQ0730_2.webp,3日前の夕食。パートナーと一緒にモスバーガー,モスバーガーのフライドポテト2人分。厚切りタイプのゴールデンフライ。バスケットに盛られ、ケチャップ付き。外はサクサク、中はふんわりの揚げたてポテト。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0730_2.webp,,#F4C430,#D4A017,#F5F5DC,#8B4513,#FFFFFF,#C8A96E,#E8DCC8,300,1.2,1.4,980,468,5.8,22.4,62,4.6,2,洋食,2人,恋人・配偶者
+731,SG,北東地区,男性,23歳,"S$ 150,000 - 199,999",3,未婚,いない,大学生（短大含む）、高専生、大学院生,SEQ0731_1.webp,夕食。今日。ショッピングモール。一人。もち米を食べている。お店で購入した,醤油ベースのタレで味付けされた粘り気のある炒めご飯。黒い食材（きのこまたは黒豆）が見え、濃い黄金色に仕上げられたシンガポール風スティッキーライス（ロー・マイ・ファン風）。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0731_1.webp,,#C8860A,#D4942B,#8B5E0A,#F0B845,#3D2B0A,#E8A835,#B87820,200,3.5,1.8,120,320,6.5,5.2,62,1.2,1,伝統ローカル料理,1人,自分
+732,SG,北西地区,男性,25歳,"S$ 125,000 - 149,999",2,未婚,いない,大学生（短大含む）、高専生、大学院生,SEQ0732_1.webp,昼食。2日前に撮影。一人で食べた。チキンチョップホットプレートとグリル野菜を食べた,鉄板に盛られた照り焼きチキンステーキ。フライドポテト、ブロッコリー、人参、マッシュルームを添えた洋食スタイルの一皿。甘辛いグレービーソースがかかっている。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0732_1.webp,,#8B4513,#F4A460,#FFD700,#228B22,#FF6347,#4A4A4A,#D2691E,550,12,2.8,980,720,38,32,68,6,1,伝統ローカル料理,1人,自分
+733,SG,北西地区,男性,26歳,"S$ 100,000 - 124,999",2,未婚,いない,サービス業（理容師、運転手など）,SEQ0733_1.webp,一週間ほど前の昼食。午後に一人で食べていた。自分で作った。アーリオオーリオを食べた,スパゲッティ・カルボナーラまたはアマトリチャーナ風パスタ。グアンチャーレまたはパンチェッタ、粉チーズ、黒胡椒をまぶしたトマトベースのソースで和えた一皿。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0733_1.webp,,#D4622A,#F5E6C8,#8B3A1C,#E8C99A,#FAFAFA,#6B2D0F,#C4A882,350,6,2.8,420,620,22,24,78,3,1,洋食,1人,自分
+734,SG,北東地区,男性,32歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0734_1.webp,マトンのナシビリヤニ,ナシビリヤニ（スパイス炊き込みご飯）にレンダン（牛肉の濃厚スパイス煮込み）、ゆで卵、きゅうりと人参のスライス、カレーソースを添えたシンガポールのマレー系ワンプレート料理。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0734_1.webp,,#C8A044,#5C2D0A,#4A7C4E,#F5E6B2,#E8A020,#D4C5A0,#8B4513,650,6,3.2,820,880,38,42,88,4,1,伝統ローカル料理,1人,自分
+735,SG,北東地区,男性,33歳,"S$ 100,000 - 124,999",2,既婚,いる,管理職（課長クラス以上）,SEQ0735_1.webp,夕食。同僚と一緒にコーヒーショップで食べた,シンガポールの粥（コンジー）2杯と豚の内臓・軟骨などの付け合わせ、ピーナッツ、湯葉のような揚げ物を含む伝統的なローカル朝食セット。米を長時間煮込んだとろみのある白粥に具材が入っている。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0735_1.webp,,#F5F0E8,#D4A574,#8B4513,#C8B89A,#E8D5B7,#6B5B3E,#F0E6D3,1200,4,5.8,680,620,32,22,72,4,2,伝統ローカル料理,2人,同僚
+736,SG,北東地区,男性,33歳,"S$ 200,000 or more",3,既婚,いる,技術職（エンジニア、プログラマーなど）,SEQ0736_1.webp,マックチキン、妻と子どもと一緒にランチ。2024年1月17日午前11時ごろ,セサミバンズに挟まれたクリスピーチキンバーガー。揚げたチキンパティにレタスとマヨネーズソースをトッピング。外はカリッと揚げられた黄金色のフライドチキンが特徴。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0736_1.webp,,#C8860A,#F5DEB3,#8B6914,#ADCF6E,#F5F5F0,#D4A843,#FFFFF0,280,8,1.8,380,520,28,22,52,2,1,洋食,1人,家族
+737,SG,シンガポール中央地区,男性,35歳,"S$ 100,000 - 124,999",2,既婚,いる,管理職（課長クラス以上）,SEQ0737_1.webp,昼食のエビ,大きなエビを醤油・砂糖・スパイスで甘辛く炒め煮にしたシンガポール風プラウン料理。殻付きのまま調理され、表面に光沢があり、ミントで飾られている。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0737_1.webp,,#D2491A,#E8723A,#B83A12,#F0A070,#8B2500,#2D2D2D,#4A7A3A,450,8,2.8,520,285,38,9,12,0.5,2,多国籍料理,1人,自分
+738,SG,シンガポール中央地区,男性,35歳,"S$ 100,000 - 124,999",2,既婚,いない,会社団体役員,SEQ0738_1.webp,妻と休暇で行った海外旅行中,2杯のカプチーノ。エスプレッソに蒸しミルクを加え、たっぷりのホワイトフォームを乗せたイタリア発祥のコーヒー飲料。白いカップとソーサーに盛り付けられ、クリーミーな泡が特徴的。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0738_1.webp,,#F5F0EB,#C8A882,#FFFFFF,#8B5E3C,#D4B896,#6B3A2A,#E8DDD0,320,10,0.2,380,160,10,8,12,0,2,洋食,2人,恋人・配偶者
+739,SG,シンガポール中央地区,男性,38歳,"S$ 90,000 - 99,999",2,未婚,いない,サービス業（理容師、運転手など）,SEQ0739_1.webp,夕食に一人で食べた牛肉麺。テレビを見ながら,赤みがかったスパイシーなスープに浸かった太麺（ラーメンまたは刀削麺風）。豆板醤や唐辛子ベースの濃厚なスープで、箸が添えられた白い陶器のボウルに盛られている。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0739_1.webp,,#D4401A,#F5E6C8,#8B4513,#FFFFFF,#C0956B,#1A1A1A,#E8C49A,650,6,4.2,420,580,18,14,92,3,1,伝統ローカル料理,1人,自分
+740,SG,北東地区,男性,38歳,"S$ 100,000 - 124,999",2,既婚,いる,サービス業（理容師、運転手など）,SEQ0740_1.webp,2024年1月2日に撮影した、妻と子どもたちと一緒に食べたハラール麻辣香鍋のディナー。ジャラン・ピサンにあるお気に入りの鍋レストラン。鶏肉の種類がとても豊富,四川風麻辣火鍋と炒飯のセット。赤い辛口スープと白濁スープの二色鍋に、乾燥唐辛子入りの黄金色炒飯が添えられている。,https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0740_1.webp,,#C0392B,#E8C07A,#8B4513,#F5DEB3,#2C2C2C,#D4A017,#F0E6D3,650,4,4.8,420,720,18,28,98,3,2,中華,3人,家族
+741,SG,北東地区,男性,39歳,"S$ 100,000 - 124,999",2,既婚,いる,管理職（課長クラス以上）,SEQ0741_1.webp,韓国での昼食,"This image shows a Korean BBQ meal setup. Here's a breakdown:
+
+### Description:
+- Main Dish: Grilled meat (likely pork or beef) on a tabletop grill.
+- Side Dishes: Various banchan (Korean side dishes) including kimchi, lettuce, and possibly bean sprouts.
+
+### Ingredients:
+- Grilled Meat: Likely marinated with soy sauce, garlic, sesame oil, and gochujang (Korean chili paste).
+- Banchan: 
+  - Kimchi: Napa cabbage, chili pepper, garlic.
+  - Lettuce: Fresh greens.
+  - Bean Sprouts: Lightly seasoned.
+
+### Nutrients (Estimated per serving):
+- Calories: 600-800 kcal
+- Protein: 40-60g
+- Carbohydrates: 20-40g
+- Fat: 30-50g
+
+### Plate/Bowl Counts:
+- Approximately 10 plates/bowls visible.
+
+### Main Colors of Food (HTML Color Codes):
+- Grilled Meat: #D2691E (chocolate)
+- Kimchi: #FF4500 (orange-red)
+- Lettuce: #228B22 (forest green)
+- Bean Sprouts: #F5DEB3 (wheat)
+
+This setup is typical for a Korean BBQ experience, where diners cook their own meat at the table and enjoy a variety of side dishes.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0741_1.webp,,#D2691E,#FF4500,#228B22,#F5DEB3,,,,270,4,3.9,500,600,40,30,20,2,3,韓国料理,3人,友達
+742,SG,北東地区,男性,41歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0742_1.webp,夕食、中華料理、海老、ヌードル、ブロッコリー,"This image shows a set of four small bowls, each containing different food items. 
+
+1. Top Left Bowl: Contains a piece of meat with a yellow sauce.
+   - Ingredients: Meat, yellow sauce (possibly curry or mustard-based).
+   - Main Colors: #D4A017 (golden yellow), #8B4513 (brown).
+
+2. Top Right Bowl: Contains a shrimp.
+   - Ingredients: Shrimp.
+   - Main Colors: #FFA07A (light salmon).
+
+3. Bottom Left Bowl: Contains broccoli.
+   - Ingredients: Broccoli.
+   - Main Colors: #228B22 (forest green).
+
+4. Bottom Right Bowl: Contains diced vegetables or fruit.
+   - Ingredients: Diced vegetables or fruit (possibly pickled).
+   - Main Colors: #FFD700 (gold), #FF4500 (orange red).
+
+Estimated Nutrients (per bowl):
+- Calories: 50-100 kcal
+- Protein: 5-10 g
+- Carbohydrates: 5-15 g
+- Fats: 2-5 g
+
+Total Plate/Bowl Count: 4 bowls.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0742_1.webp,,#D4A017,#8B4513,#FFA07A,#228B22,#FFD700,#FF4500,,36,1,3,740,50,5,2,5,0.5,1,伝統ローカル料理,1人,自分
+743,SG,北東地区,男性,43歳,"S$ 70,000 - 79,999",1,既婚,いる,営業・販売職（セールスマン、店員など）,SEQ0743_1.webp,チキンライス。ひとりでランチ,"Description:
+The dish consists of sliced chicken served over rice, accompanied by a halved egg, cucumber slices, a bowl of soup, and a small portion of chili sauce.
+
+Ingredients:
+- Chicken
+- Rice
+- Egg
+- Cucumber
+- Soup (likely chicken broth)
+- Chili sauce
+
+Estimated Nutrients:
+- Calories: ~600 kcal
+- Protein: ~40g
+- Carbohydrates: ~70g
+- Fat: ~20g
+
+Plate/Bowl Counts:
+- 1 main plate
+- 1 small bowl for soup
+- 1 small container for sauce
+
+Main Colors of Food (HTML Color Codes):
+- Chicken: #D2B48C (Tan)
+- Rice: #F5F5DC (Beige)
+- Egg yolk: #FF8C00 (Dark Orange)
+- Cucumber: #98FB98 (Pale Green)
+- Soup: #FFD700 (Gold)
+- Chili sauce: #FF4500 (Orange Red)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0743_1.webp,,#D2B48C,#F5F5DC,#FF8C00,#98FB98,#FFD700,#FF4500,,390,14,3.3,550,600,40,20,70,7,1,伝統ローカル料理,1人,自分
+745,SG,北東地区,男性,44歳,"S$ 150,000 - 199,999",3,既婚,いる,管理職（課長クラス以上）,SEQ0745_1.webp,今日の昼休みに一人でローストチキンライスを食べた,"This dish appears to be Hainanese chicken rice. It consists of poached or roasted chicken served on a bed of fragrant rice, accompanied by cucumber slices.
+
+### Ingredients:
+- Chicken (poached or roasted)
+- Rice (cooked in chicken broth)
+- Cucumber slices
+- Soy sauce (optional)
+- Ginger and garlic (used in cooking the rice)
+
+### Estimated Nutrients (per serving):
+- Calories: ~600 kcal
+- Protein: ~40g
+- Carbohydrates: ~70g
+- Fat: ~20g
+
+### Plate/Bowl Counts:
+- 1 plate
+
+### Main Colors of Food:
+- Chicken: #D2691E (chestnut brown)
+- Rice: #F5DEB3 (wheat)
+- Cucumber: #7FFF00 (chartreuse green)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0745_1.webp,,#D2691E,#F5DEB3,#7FFF00,,,,,390,14,1.7,500,600,40,20,70,7,1,伝統ローカル料理,1人,自分
+746,SG,北東地区,男性,44歳,"S$ 150,000 - 199,999",3,既婚,いる,管理職（課長クラス以上）,SEQ0746_1.webp,地元の軽食堂で家族と一緒にミーレブス（ヌードル）を夕食として食べた,"This dish appears to be a plate of spicy noodles with a boiled egg. 
+
+Ingredients:
+- Noodles
+- Boiled egg
+- Bean sprouts
+- Green chili slices
+- Spicy sauce (possibly containing chili paste, garlic, and soy sauce)
+
+Estimated Nutrients:
+- Calories: ~400-500 kcal
+- Protein: ~15-20g
+- Carbohydrates: ~60-70g
+- Fat: ~10-15g
+
+Plate/Bowl Count:
+- 1 plate
+
+Main Colors of Food:
+- Noodles: #D4A017 (Golden Yellow)
+- Sauce: #8B4513 (Saddle Brown)
+- Plate: #32CD32 (Lime Green)
+- Egg: #FFF8DC (Cornsilk)
+- Chili: #006400 (Dark Green)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0746_1.webp,,#D4A017,#8B4513,#32CD32,#FFF8DC,#006400,,,255,12,3.4,360,400,15,10,60,6,4,伝統ローカル料理,4人以上,家族
+747,SG,シンガポール中央地区,男性,49歳,"S$ 125,000 - 149,999",2,既婚,いる,管理職（課長クラス以上）,SEQ0747_1.webp,先週末の昼食。午前11時45分ごろ。一人でローミー（ヌードル）を食べている,"This dish features a plate of noodles topped with minced meat, fried pieces, and chopped green onions, accompanied by a bowl of clear soup with herbs.
+
+Ingredients:
+- Noodles
+- Minced meat
+- Fried pieces (possibly chicken or tofu)
+- Green onions
+- Soy sauce or dark sauce
+- Clear soup with herbs
+
+Estimated Nutrients:
+- Calories: 600-800 kcal
+- Protein: 25-35g
+- Carbohydrates: 70-90g
+- Fat: 20-30g
+
+Plate/Bowl Counts:
+- 1 plate
+- 1 bowl
+
+Main Colors of Food (HTML Color Codes):
+- Noodles: #D2B48C (Tan)
+- Sauce: #3B2F2F (Dark Brown)
+- Green Onions: #228B22 (Forest Green)
+- Soup: #F5F5DC (Beige) with #228B22 (Forest Green) for herbs
+
+This meal is a combination of savory and fresh flavors, with a balance of textures from the noodles and fried pieces.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0747_1.webp,,#D2B48C,#3B2F2F,#228B22,#F5F5DC,#228B22,,,345,14,3.7,470,600,25,20,70,7,1,伝統ローカル料理,1人,自分
+748,SG,北西地区,男性,50歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0748_1.webp,娘の誕生日祝いで、家族と義理の家族で訪れたホテルのビュッフェでのランチ。各国料理やアジア料理など、料理の種類がとても豊富。2024年1月6日午後12時半ごろ,"The image shows a variety of sushi rolls arranged on trays. 
+
+### Ingredients:
+- Sushi rice
+- Nori (seaweed)
+- Fish (possibly salmon or tuna)
+- Vegetables (like cucumber or avocado)
+- Fish roe (visible on some rolls)
+
+### Estimated Nutrients (per roll):
+- Calories: 50-70 kcal
+- Protein: 2-4 g
+- Carbohydrates: 8-12 g
+- Fat: 1-3 g
+
+### Plate/Bowl Counts:
+- 3 trays of sushi
+
+### Main Colors of Food:
+- White (#FFFFFF) for rice
+- Black (#000000) for nori
+- Orange (#FFA500) for fish roe
+- Green (#008000) for vegetables
+
+These are rough estimates and can vary based on specific ingredients and portion sizes.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0748_1.webp,,#FFFFFF,#000000,#FFA500,#008000,,,,33,2,2.1,830,50,2,1,8,0.8,5,和食,4人以上,家族
+749,SG,北西地区,男性,50歳,"S$ 100,000 - 124,999",2,既婚,いる,管理職（課長クラス以上）,SEQ0749_1.webp,"-朝食
+-先週の朝
+-自宅で
+-一人で
+-海老ヌードル
+-買ってきた","This dish appears to be a bowl of noodle soup with shrimp and vegetables.
+
+### Ingredients:
+- Noodles
+- Shrimp
+- Green leafy vegetables (possibly spinach or similar)
+- Sliced meat or fish cake
+- Broth
+
+### Estimated Nutrients (per bowl):
+- Calories: ~350-450 kcal
+- Protein: ~20-30g
+- Carbohydrates: ~40-50g
+- Fat: ~10-15g
+
+### Plate/Bowl Count:
+- 1 bowl
+
+### Main Colors of Food:
+- Broth: #C68642 (brown)
+- Shrimp: #F5A9A9 (pink)
+- Vegetables: #228B22 (green)
+- Noodles: #F5DEB3 (wheat)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0749_1.webp,,#C68642,#F5A9A9,#228B22,#F5DEB3,,,,210,8,3,890,350,20,10,40,4,1,伝統ローカル料理,1人,自分
+750,SG,南西地区,男性,50歳,"S$ 150,000 - 199,999",3,既婚,いる,管理職（課長クラス以上）,SEQ0750_1.webp,今日の正午に同僚と食べた昼食。ビボシティにあるFish & Co.で、このチキンチョップとパイナップルライスを食べた,"Description:
+The plate contains a serving of grilled chicken topped with a creamy sauce, a portion of yellow rice, and a side salad with mixed greens.
+
+Ingredients:
+- Grilled chicken
+- Creamy sauce (likely containing cream, herbs, and spices)
+- Yellow rice (possibly seasoned with turmeric or saffron)
+- Mixed greens (lettuce, possibly with other leafy greens)
+
+Estimated Nutrients:
+- Calories: ~600-800 kcal
+- Protein: ~40-50g
+- Carbohydrates: ~60-80g
+- Fat: ~20-30g
+
+Plate/Bowl Count:
+- 1 plate
+
+Main Colors of Food (HTML Color Codes):
+- Yellow rice: #FFD700
+- Mixed greens: #7CFC00
+- Creamy sauce: #F5F5DC
+- Grilled chicken: #D2691E",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0750_1.webp,,#FFD700,#7CFC00,#F5F5DC,#D2691E,,,,360,12,1.5,540,600,40,20,60,6,2,洋食,2人,同僚
+751,SG,北西地区,男性,53歳,"S$ 150,000 - 199,999",3,離別,いない,管理職（課長クラス以上）,SEQ0751_1.webp,朝食,"The image shows a variety of toasted bread dishes on plates, with different toppings and a bowl of sauce.
+
+### Ingredients:
+1. Toasted Bread with Yellow Topping:
+   - Bread
+   - Likely butter or margarine
+   - Custard or egg-based topping
+
+2. Toasted Bread with Brown Topping:
+   - Bread
+   - Chocolate spread or sauce
+
+3. Plain Toasted Bread:
+   - Bread
+   - Butter or margarine
+
+4. Bowl of Sauce:
+   - Green sauce, possibly pandan or coconut-based
+
+5. Cubed White Pieces:
+   - Likely steamed or boiled taro or yam
+
+### Estimated Nutrients (per serving):
+- Calories: 300-400 kcal
+- Carbohydrates: 40-50g
+- Proteins: 5-10g
+- Fats: 10-20g
+
+### Plate/Bowl Counts:
+- 4 plates
+- 1 bowl
+
+### Main Colors of Food (HTML Color Codes):
+- Yellow topping: `#FFD700`
+- Brown topping: `#8B4513`
+- Bread: `#F5DEB3`
+- Green sauce: `#98FB98`
+- White cubes: `#FFFFFF`",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0751_1.webp,,#FFD700,#8B4513,#F5DEB3,#98FB98,#FFFFFF,,,150,8,2,380,300,,10,40,4,2,伝統ローカル料理,2人,恋人・配偶者
+753,SG,北東地区,男性,55歳,"S$ 125,000 - 149,999",2,未婚,いない,管理職（課長クラス以上）,SEQ0753_1.webp,昨日一人で食べた朝食,"Description:
+The food consists of two slices of whole grain bread with cheese and meat floss (also known as pork floss or rousong) in between.
+
+Ingredients:
+- Whole grain bread
+- Cheese
+- Meat floss
+
+Estimated Nutrients:
+- Calories: ~350 kcal
+- Protein: ~15 g
+- Carbohydrates: ~40 g
+- Fat: ~15 g
+
+Plate/Bowl Counts:
+- 1 plate
+
+Main Colors of Food (HTML Color Codes):
+- Bread: #D2B48C (Tan)
+- Cheese: #F5F5DC (Beige)
+- Meat Floss: #A0522D (Sienna)
+- Plate: #D2691E (Chocolate)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0753_1.webp,,#D2B48C,#F5F5DC,#A0522D,#D2691E,,,,210,8,2.3,490,350,15,15,40,4,1,洋食,1人,自分
+754,SG,北東地区,男性,57歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0754_1.webp,スポーツの後の今日のランチ。友人と一緒にフードコートで食事した,"Description:
+This dish appears to be a noodle soup with a rich, spicy broth. It includes rice noodles, tofu, a hard-boiled egg, and is garnished with green onions.
+
+Ingredients:
+- Rice noodles
+- Tofu
+- Hard-boiled egg
+- Green onions
+- Spicy broth (likely containing chili paste, garlic, and other spices)
+
+Estimated Nutrients:
+- Calories: ~400-500 kcal
+- Protein: ~15-20g
+- Carbohydrates: ~50-60g
+- Fat: ~15-20g
+
+Plate/Bowl Count:
+- 1 plate
+
+Main Colors of Food:
+- Broth: #D2691E (chocolate)
+- Noodles: #F5F5DC (beige)
+- Tofu: #D2B48C (tan)
+- Egg: #FFFFE0 (light yellow)
+- Green onions: #228B22 (forest green)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0754_1.webp,,#D2691E,#F5F5DC,#D2B48C,#FFFFE0,#228B22,,,240,10,3.6,550,400,15,15,50,5,2,伝統ローカル料理,2人,友達
+755,SG,北東地区,男性,58歳,"S$ 100,000 - 124,999",2,未婚,いない,管理職（課長クラス以上）,SEQ0755_1.webp,昼食も夕食も家で自炊,"This dish appears to be a type of rice dish, possibly a pulao or biryani, with visible chunks of paneer (Indian cottage cheese) and lentils.
+
+### Ingredients:
+- Rice
+- Paneer
+- Lentils (possibly chickpeas or split peas)
+- Spices (likely turmeric, cumin, coriander, etc.)
+- Oil or ghee
+- Onions (possibly)
+- Garlic and ginger (possibly)
+
+### Estimated Nutrients (per serving):
+- Calories: ~350-450 kcal
+- Protein: ~12-15 g
+- Carbohydrates: ~50-60 g
+- Fat: ~10-15 g
+
+### Plate/Bowl Count:
+- 1 bowl
+
+### Main Colors of Food:
+- Yellow: #FFD700
+- White (Paneer): #FFFFFF
+- Light Brown (Lentils): #D2B48C",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0755_1.webp,,#FFD700,#FFFFFF,#D2B48C,,,,,216,10,1.7,350,350,12,10,50,5,1,伝統ローカル料理,1人,自分
+756,SG,北西地区,男性,59歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0756_1.webp,友人と一緒にレストランで夕食,"Description of Food:
+
+The image shows a variety of dishes typically found in a Southeast Asian meal setting. There are plates of white rice, a curry dish, a vegetable dish, and drinks.
+
+Ingredients:
+
+1. White Rice:
+   - Rice
+
+2. Curry Dish:
+   - Meat (possibly beef or chicken)
+   - Curry spices
+   - Coconut milk
+   - Chili peppers
+   - Herbs (such as cilantro or mint)
+
+3. Vegetable Dish:
+   - Leafy greens (possibly spinach or water spinach)
+   - Chili peppers
+   - Garlic
+   - Soy sauce or fish sauce
+
+4. Drinks:
+   - Green drink: Likely a mint or lime-based drink
+   - Pink drink: Possibly a fruit juice or milkshake
+   - Brown drink: Likely a tea or coffee
+
+Estimated Total Nutrients (per serving):
+
+- Calories: 600-800 kcal
+- Protein: 20-30 g
+- Carbohydrates: 80-100 g
+- Fat: 20-30 g
+
+Plate/Bowl Counts:
+
+- Plates: 3 (with rice)
+- Bowls: 2 (with curry and vegetables)
+- Glasses: 3 (with drinks)
+
+Main Colors of Food (HTML Color Codes):
+
+- White Rice: #FFFFFF
+- Curry: #8B4513 (SaddleBrown)
+- Vegetables: #228B22 (ForestGreen)
+- Green Drink: #32CD32 (LimeGreen)
+- Pink Drink: #FF69B4 (HotPink)
+- Brown Drink: #D2691E (Chocolate)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0756_1.webp,,#FFFFFF,#8B4513,#228B22,#32CD32,#FF69B4,#D2691E,,360,16,3.2,680,600,20,20,80,8,3,伝統ローカル料理,3人,友達
+757,SG,南西地区,男性,59歳,"S$ 200,000 or more",3,既婚,いる,自由業、専門職（医者、弁護士など）,SEQ0757_1.webp,このフィッシュスープヌードルの写真は、12月22日午後7時27分、ギンモーマーケットのホーカーセンターで妻とディナーをしたときに撮ったもの。私たちは食べ物を探していて、このヌードル店が魅力的に見えた,"This image shows a bowl of noodle soup. 
+
+### Ingredients:
+- Rice noodles
+- Fish slices
+- Leafy greens (possibly spinach or similar)
+- Broth
+- Garnishes (possibly fried onions or herbs)
+
+### Estimated Nutrients (per bowl):
+- Calories: ~350-450 kcal
+- Protein: ~20-30g
+- Carbohydrates: ~50-60g
+- Fat: ~5-10g
+
+### Plate/Bowl Counts:
+- 2 bowls of noodle soup
+- 2 small sauce dishes
+
+### Main Colors of Food:
+- Noodles: #F5F5DC (Beige)
+- Broth: #D2B48C (Tan)
+- Greens: #2E8B57 (Sea Green)
+- Fish: #F5F5F5 (White)
+- Sauce: #8B0000 (Dark Red)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0757_1.webp,,#F5F5DC,#D2B48C,#2E8B57,#F5F5F5,#8B0000,,,225,10,3.1,470,350,20,5,50,5,2,伝統ローカル料理,2人,恋人・配偶者
+758,SG,南東地区,女性,17歳,"S$ 200,000 or more",3,未婚,いない,高校生、浪人生,SEQ0758_1.webp,友人と一緒にこのストロベリーピンスを食べた,"This is a dessert featuring shaved ice topped with strawberries and a pink sauce, likely strawberry-flavored. It is served in a single bowl.
+
+Ingredients:
+- Shaved ice
+- Fresh strawberries
+- Strawberry sauce or syrup
+- Possibly condensed milk or cream
+
+Estimated Nutrients:
+- Calories: ~300-400 kcal
+- Carbohydrates: ~60-80g
+- Sugars: ~50-70g
+- Protein: ~3-5g
+- Fat: ~5-10g
+
+Plate/Bowl Count:
+- 1 bowl
+
+Main Colors:
+- Pink (#FFC0CB)
+- Red (#FF0000)
+- White (#FFFFFF)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0758_1.webp,,#FFC0CB,#FF0000,#FFFFFF,,,,,204,12,1.8,390,300,3,5,60,6,2,韓国料理,2人,友達
+759,SG,南西地区,女性,17歳,"S$ 70,000 - 79,999",1,未婚,いない,高校生、浪人生,SEQ0759_2.webp,親友と一緒にレストランで外食をしたので、食事を作ったのはそのレストランのシェフ,"The image shows a meal consisting of two main dishes. 
+
+First Dish (Bowl):
+- Ingredients: Scrambled eggs, sausages, ground meat, vegetables, and possibly some pickled items.
+- Estimated Nutrients:
+  - Calories: ~500 kcal
+  - Protein: ~25g
+  - Carbohydrates: ~20g
+  - Fat: ~35g
+- Main Colors: 
+  - Scrambled eggs: #F5E79E
+  - Sausages: #A0522D
+  - Ground meat: #D2B48C
+  - Vegetables: #556B2F
+
+Second Dish (Box):
+- Ingredients: Fried egg, seaweed, kimchi, and a slice of processed meat.
+- Estimated Nutrients:
+  - Calories: ~400 kcal
+  - Protein: ~20g
+  - Carbohydrates: ~15g
+  - Fat: ~30g
+- Main Colors:
+  - Fried egg: #FFD700 (yolk), #FFFFFF (white)
+  - Seaweed: #2F4F4F
+  - Kimchi: #FF6347
+  - Processed meat: #D2691E
+
+Plate/Bowl Counts: 1 bowl and 1 box.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0759_2.webp,,#F5E79E,#A0522D,#D2B48C,#556B2F,#FFD700,#FFFFFF,#2F4F4F,240,4,2.4,790,500,25,35,20,2,2,多国籍料理,2人,友達
+760,SG,北東地区,女性,19歳,"S$ 200,000 or more",3,未婚,いない,家業手伝い：商店,SEQ0760_1.webp,良くないことかもしれないが、学校の食堂でこれを食べた（笑）,"This dish consists of white rice, a sausage, and a portion of fried chicken. 
+
+### Ingredients:
+- White Rice: Rice, water, salt.
+- Sausage: Meat (usually pork or chicken), spices, preservatives.
+- Fried Chicken: Chicken, flour, spices, oil.
+
+### Estimated Nutrients:
+- Calories: Approximately 600-800 kcal
+- Protein: 25-35g
+- Carbohydrates: 70-90g
+- Fats: 20-30g
+
+### Plate/Bowl Count:
+- 1 plate
+
+### Main Colors of Food:
+- White rice: `#FFFFFF`
+- Sausage: `#D2691E`
+- Fried chicken: `#A0522D`",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0760_1.webp,,#FFFFFF,#D2691E,#A0522D,,,,,345,14,2,480,700,25,20,70,7,1,伝統ローカル料理,1人,自分
+761,SG,北東地区,女性,19歳,"S$ 50,000 - 59,999",1,未婚,いない,大学生（短大含む）、高専生、大学院生,SEQ0761_1.webp,親友と一緒に食べた新年のランチ。彼女の家の近くにあるベジタリアンの店に行った。私は日本のカツカレーうどん、彼女は天丼を注文し、餃子をシェアした,"The image shows a variety of dishes:
+
+1. Curry Udon with Katsu:
+   - Ingredients: Udon noodles, curry sauce, breaded and fried cutlet (katsu), carrots, lettuce.
+   - Estimated Nutrients: 
+     - Calories: ~700 kcal
+     - Protein: ~30g
+     - Carbs: ~90g
+     - Fat: ~25g
+   - Main Colors: 
+     - Curry: #D2691E
+     - Noodles: #F5DEB3
+     - Katsu: #D2B48C
+
+2. Fried Dumplings with Dipping Sauce:
+   - Ingredients: Dumplings (likely filled with meat or vegetables), dipping sauce, shredded carrots, lettuce.
+   - Estimated Nutrients: 
+     - Calories: ~300 kcal
+     - Protein: ~10g
+     - Carbs: ~40g
+     - Fat: ~10g
+   - Main Colors: 
+     - Dumplings: #D2B48C
+     - Sauce: #8B4513
+
+3. Tempura Vegetables:
+   - Ingredients: Assorted tempura vegetables.
+   - Estimated Nutrients: 
+     - Calories: ~250 kcal
+     - Protein: ~5g
+     - Carbs: ~30g
+     - Fat: ~15g
+   - Main Colors: 
+     - Tempura: #F5DEB3
+
+4. Rice Bowl with Toppings:
+   - Ingredients: Rice, assorted toppings (possibly meat and vegetables).
+   - Estimated Nutrients: 
+     - Calories: ~600 kcal
+     - Protein: ~20g
+     - Carbs: ~80g
+     - Fat: ~20g
+   - Main Colors: 
+     - Rice: #FFFFFF
+     - Toppings: #8B4513
+
+Plate/Bowl Counts: 4
+
+These are rough estimates and can vary based on specific preparation methods and portion sizes.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0761_1.webp,,#D2691E,#F5DEB3,#D2B48C,#D2B48C,#8B4513,#F5DEB3,#FFFFFF,435,18,4.5,630,700,30,25,90,9,2,和食,2人,友達
+762,SG,シンガポール中央地区,女性,21歳,"S$ 125,000 - 149,999",2,未婚,いない,無職,SEQ0762_1.webp,"1月24日夜8時過ぎ、ブギスの元気寿司で夕食
+ボーイフレンドと一緒にお寿司を食べている","Description:
+The image shows two plates of sushi. One plate has a piece of seared salmon sushi, and the other has a piece of raw salmon sushi. There are also two small dishes with soy sauce and a pair of chopsticks.
+
+Ingredients:
+- Salmon (raw and seared)
+- Rice
+- Soy sauce
+- Seasoning (possibly salt and pepper for the seared salmon)
+
+Estimated Nutrients (per serving):
+- Calories: ~200 kcal
+- Protein: ~15g
+- Fat: ~10g
+- Carbohydrates: ~20g
+
+Plate/Bowl Counts:
+- 2 plates with sushi
+- 2 small dishes with soy sauce
+
+Main Colors of Food (HTML color codes):
+- Salmon: #FFA07A (Light Salmon)
+- Rice: #FFFFFF (White)
+- Soy Sauce: #5C4033 (Dark Brown)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0762_1.webp,,#FFA07A,#FFFFFF,#5C4033,,,,,135,4,4,430,200,15,10,20,2,2,和食,2人,恋人・配偶者
+763,SG,南東地区,女性,21歳,"S$ 80,000 - 89,999",2,未婚,いない,営業・販売職（セールスマン、店員など）,SEQ0763_1.webp,昼食時に撮った写真。韓国料理が食べたくて友人と行った。トッポギのビュッフェだったので、一緒に作った,"This dish appears to be a spicy Korean stew, possibly a type of jjigae or hot pot.
+
+### Ingredients:
+- Tofu
+- Mushrooms
+- Kimchi or cabbage
+- Spicy broth (likely made with gochujang or gochugaru)
+- Possible additions: meat or seafood, vegetables
+
+### Estimated Nutrients (per serving):
+- Calories: 300-400 kcal
+- Protein: 15-20g
+- Carbohydrates: 20-30g
+- Fat: 15-20g
+
+### Plate/Bowl Count:
+- 1 pot
+
+### Main Colors:
+- Dark orange (#FF4500)
+- Light brown (#D2691E)
+- Red (#FF0000)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0763_1.webp,,#FF4500,#D2691E,#FF0000,,,,,150,4,1.8,800,300,15,15,20,2,2,韓国料理,2人,友達
+764,SG,北東地区,女性,22歳,"S$ 125,000 - 149,999",2,未婚,いない,大学生（短大含む）、高専生、大学院生,SEQ0764_1.webp,カフェで友人と一緒にランチ。ベイクドライスとトーストを食べた,"The image shows two plates of food and a glass of dark liquid.
+
+1. Left Plate:
+   - Description: Toast topped with banana slices and a sprinkle of cinnamon or sugar.
+   - Ingredients: Bread, bananas, cinnamon/sugar.
+   - Estimated Nutrients:
+     - Calories: ~250
+     - Carbohydrates: ~50g
+     - Protein: ~5g
+     - Fat: ~3g
+   - Main Colors: 
+     - Banana: #F5E6CC
+     - Toast: #D2B48C
+
+2. Right Plate:
+   - Description: A baked dish, possibly a gratin or casserole, with a creamy topping.
+   - Ingredients: Potatoes or pasta, cheese, cream, herbs.
+   - Estimated Nutrients:
+     - Calories: ~400
+     - Carbohydrates: ~30g
+     - Protein: ~15g
+     - Fat: ~25g
+   - Main Colors: 
+     - Creamy topping: #F5F5DC
+     - Herbs: #6B8E23
+
+3. Glass:
+   - Description: Dark liquid, possibly coffee or juice.
+   - Main Colors: 
+     - Liquid: #3B2F2F
+
+Plate/Bowl Counts: 2 plates, 1 glass.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0764_1.webp,,#F5E6CC,#D2B48C,#F5F5DC,#6B8E23,#3B2F2F,,,174,10,2.2,470,250,5,3,50,5,2,洋食,2人,友達
+765,SG,北西地区,女性,23歳,"S$ 125,000 - 149,999",2,未婚,いない,技術職（エンジニア、プログラマーなど）,SEQ0765_1.webp,"夕食。2023年11月6日午後8時3分
+出張のときに一人で
+カツ丼を食べている
+レストランで購入","This meal consists of three main components:
+
+1. Rice Bowl:
+   - Ingredients: White rice.
+   - Main Color: White (#FFFFFF).
+
+2. Noodle Bowl:
+   - Ingredients: Udon noodles, sliced green onions, seaweed.
+   - Main Colors: White (#FFFFFF), Green (#7CFC00), Black (#000000).
+
+3. Main Dish:
+   - Ingredients: Egg, meat (possibly beef or pork), green onions, sauce.
+   - Main Colors: Yellow (#F5DEB3), Brown (#8B4513), Green (#7CFC00).
+
+Estimated Nutrients (approximate for the entire meal):
+- Calories: 800-1000 kcal
+- Protein: 30-40g
+- Carbohydrates: 100-120g
+- Fat: 20-30g
+
+Plate/Bowl Counts: 3 bowls.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0765_1.webp,,#FFFFFF,#FFFFFF,#7CFC00,#000000,#F5DEB3,#8B4513,#7CFC00,450,20,2.5,490,800,30,20,100,10,1,和食,1人,自分
+766,SG,シンガポール中央地区,女性,23歳,"S$ 125,000 - 149,999",2,未婚,いない,サービス業（理容師、運転手など）,SEQ0766_1.webp,先週の土曜日に手づくりした昼食。キャベツ、韓国餅、卵豆腐,"This dish appears to be a type of dumpling or dim sum with a creamy sauce. 
+
+### Ingredients:
+- Dumplings (likely made from flour, water, and possibly a filling such as meat or vegetables)
+- Creamy sauce (could be made from ingredients like cream, cheese, or a dairy substitute)
+
+### Estimated Nutrients (per serving):
+- Calories: 300-400 kcal
+- Protein: 10-15 g
+- Carbohydrates: 40-50 g
+- Fat: 10-20 g
+
+### Plate/Bowl Count:
+- 1 bowl
+
+### Main Colors of Food:
+- Light brown (#D2B48C)
+- Creamy white (#F5F5DC)
+- Golden brown (#DAA520)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0766_1.webp,,#D2B48C,#F5F5DC,#DAA520,,,,,180,8,2.5,660,300,10,10,40,4,1,韓国料理,1人,自分
+767,SG,北東地区,女性,25歳,"S$ 50,000 - 59,999",1,未婚,いる,営業・販売職（セールスマン、店員など）,SEQ0767_1.webp,私のお昼ご飯に食べたもの。おいしい,"The image shows two bowls of food on a tray. 
+
+1. Food Description:
+   - Bowl 1: Contains a reddish-orange soup with visible greens and tofu.
+   - Bowl 2: Contains white rice.
+
+2. Ingredients:
+   - Soup: Likely includes broth, tofu, leafy greens, and possibly spices or seasoning.
+   - Rice: Plain white rice.
+
+3. Estimated Nutrients:
+   - Soup:
+     - Calories: ~250 kcal
+     - Protein: ~10g
+     - Carbohydrates: ~20g
+     - Fat: ~15g
+   - Rice:
+     - Calories: ~200 kcal
+     - Protein: ~4g
+     - Carbohydrates: ~45g
+     - Fat: ~0.5g
+
+4. Plate/Bowl Counts:
+   - Total: 2 bowls
+
+5. Main Colors of Food (HTML Color Codes):
+   - Soup: #FF4500 (OrangeRed), #228B22 (ForestGreen)
+   - Rice: #FFFFFF (White)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0767_1.webp,,#FF4500,#228B22,#FFFFFF,,,,,135,4,4.9,630,250,10,15,20,2,1,伝統ローカル料理,1人,自分
+768,SG,北東地区,女性,26歳,"S$ 70,000 - 79,999",1,未婚,いない,技術職（エンジニア、プログラマーなど）,SEQ0768_1.webp,"おやつ。昨日キッチンで撮影。午後4時。一人だった。お菓子が焼けるのを待ちな
+がら仕事をしていた。このガレット・デ・ロワを食べた。私が作った","This appears to be a baked pastry, possibly a pie or a puff pastry dish.
+
+### Ingredients:
+- Pastry Dough: Flour, butter, water, salt
+- Filling: Could include meat, vegetables, cheese, or fruit (not visible)
+- Egg Wash: Egg, milk or water (for the golden color)
+
+### Estimated Nutrients (per serving):
+- Calories: 300-500 kcal
+- Carbohydrates: 30-50g
+- Proteins: 5-10g
+- Fats: 15-30g
+
+### Plate/Bowl Counts:
+- Typically served on one plate.
+
+### Main Colors of Food:
+- Golden Brown: #D2A679
+- Light Brown: #C19A6B
+
+This is a rough estimate as the exact filling and portion size are unknown.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0768_1.webp,,#D2A679,#C19A6B,,,,,,135,6,2.4,620,300,10,15,30,3,1,洋食,1人,自分
+769,SG,シンガポール中央地区,女性,27歳,"S$ 150,000 - 199,999",3,既婚,いる,管理職（課長クラス以上）,SEQ0769_1.webp,昨日の昼食で、午後2時ごろに一人で食べた。家で自分で作った,"Description:
+
+The dish features a seafood platter with grilled prawns, a side of fries, and a fresh salad. There are also lemon wedges and dipping sauces.
+
+Ingredients:
+
+- Grilled prawns
+- French fries
+- Mixed salad (lettuce, tomatoes, cabbage, seeds)
+- Lemon wedges
+- Dipping sauces (possibly aioli or mustard-based)
+- Bread or toast
+
+Estimated Nutrients:
+
+- Calories: ~800-1000 kcal
+- Protein: ~50-60g
+- Carbohydrates: ~70-80g
+- Fat: ~40-50g
+
+Plate/Bowl Counts:
+
+- 1 large plate
+- 1 small bowl for salad
+- 2 small bowls for sauces
+
+Main Colors of Food (HTML Color Codes):
+
+- Prawns: #FF6347 (Tomato)
+- Fries: #FFD700 (Gold)
+- Salad Greens: #228B22 (Forest Green)
+- Lemon: #FFFACD (Lemon Chiffon)
+- Sauce: #F5DEB3 (Wheat)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0769_1.webp,,#FF6347,#FFD700,#228B22,#FFFACD,#F5DEB3,,,480,14,2.3,420,800,50,40,70,7,1,洋食,1人,自分
+770,SG,北東地区,女性,27歳,"S$ 150,000 - 199,999",3,未婚,いない,技術職（エンジニア、プログラマーなど）,SEQ0770_1.webp,週末のランチ。 大切な人と一緒に,"Description:
+
+The image shows a bowl of noodles topped with various ingredients. The dish includes a fried egg, minced meat, crispy anchovies, and chopped green onions. There is also a bowl of soup and another dish in the background.
+
+Ingredients:
+
+- Noodles
+- Fried egg
+- Minced meat (likely pork or beef)
+- Crispy anchovies
+- Green onions
+- Possibly garlic or shallots
+- Soup (broth with vegetables or tofu skin)
+
+Estimated Nutrients (per serving):
+
+- Calories: 600-800 kcal
+- Protein: 30-40g
+- Carbohydrates: 60-80g
+- Fat: 20-30g
+
+Plate/Bowl Counts:
+
+- 2 bowls of food
+- 1 bowl of soup
+
+Main Colors of Food (HTML Color Codes):
+
+- Noodles: #F5DEB3 (Wheat)
+- Egg White: #FFFFFF (White)
+- Egg Yolk: #FFD700 (Gold)
+- Minced Meat: #8B4513 (SaddleBrown)
+- Anchovies: #A0522D (Sienna)
+- Green Onions: #228B22 (ForestGreen)
+- Soup: #F5F5DC (Beige)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0770_1.webp,,#F5DEB3,#FFFFFF,#FFD700,#8B4513,#A0522D,#228B22,#F5F5DC,330,12,4.9,820,600,30,20,60,6,2,伝統ローカル料理,2人,恋人・配偶者
+771,SG,南西地区,女性,29歳,"S$ 60,000 - 69,999",1,既婚,いない,管理職（課長クラス以上）,SEQ0771_1.webp,昼食中。ボーイフレンドと一緒にマレーシアに行き、ウッドファイヤーというレストランで。正確な日付は覚えていないが、水曜日だった。ウッドファイヤーはハンバーガーとフライドポテトの専門店,"Description of Food:
+
+1. Cheese Steak Sandwich:
+   - Ingredients: Bread, cheese, steak, mushrooms, onions.
+   - Estimated Nutrients: 
+     - Calories: ~700
+     - Protein: ~40g
+     - Carbs: ~50g
+     - Fat: ~35g
+   - Plate/Bowl Count: 1
+   - Main Colors: 
+     - Bread: #D2B48C
+     - Cheese: #FFD700
+     - Steak: #8B4513
+
+2. Curly Fries:
+   - Ingredients: Potatoes, oil, seasoning.
+   - Estimated Nutrients (per serving):
+     - Calories: ~300
+     - Protein: ~4g
+     - Carbs: ~35g
+     - Fat: ~18g
+   - Plate/Bowl Count: 2
+   - Main Colors:
+     - Fries: #FFA500
+
+3. Burgers:
+   - Ingredients: Bun, beef patty, lettuce, cheese, bacon, sauce.
+   - Estimated Nutrients (per burger):
+     - Calories: ~800
+     - Protein: ~45g
+     - Carbs: ~50g
+     - Fat: ~50g
+   - Plate/Bowl Count: 2
+   - Main Colors:
+     - Bun: #D2691E
+     - Lettuce: #228B22
+     - Cheese: #FFD700
+     - Bacon: #8B0000
+
+Overall Nutrient Estimate:
+- Total Calories: ~3100
+- Total Protein: ~138g
+- Total Carbs: ~220g
+- Total Fat: ~186g
+
+Main Colors of Food:
+- #D2B48C (Bread)
+- #FFD700 (Cheese)
+- #8B4513 (Steak)
+- #FFA500 (Fries)
+- #D2691E (Bun)
+- #228B22 (Lettuce)
+- #8B0000 (Bacon)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0771_1.webp,,#D2B48C,#FFD700,#8B4513,#FFA500,#D2691E,#228B22,#FFD700,375,10,2.8,520,700,40,35,50,5,1,洋食,1人,恋人・配偶者
+772,SG,シンガポール中央地区,女性,33歳,"S$ 80,000 - 89,999",2,未婚,いない,管理職（課長クラス以上）,SEQ0772_1.webp,ダーティーダックと呼ばれる料理で、元同僚の友人たちと夕食に食べた。おもしろい梅ソースがかかっていて、鴨肉によく合う,"This dish appears to be grilled or roasted meat, possibly lamb or beef, served with a side of roasted or pickled vegetables.
+
+Ingredients:
+- Meat (lamb or beef)
+- Herbs and spices (e.g., rosemary, thyme, salt, pepper)
+- Olive oil or another cooking oil
+- Vegetables (possibly onions or beets)
+
+Estimated Nutrients (per serving):
+- Calories: 400-600 kcal
+- Protein: 30-40g
+- Fat: 25-35g
+- Carbohydrates: 5-15g
+
+Plate/Bowl Count:
+- 1 plate
+
+Main Colors of Food:
+- Dark brown (meat) - #654321
+- Deep red (vegetables) - #8B0000
+- Blue (plate) - #0000FF",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0772_1.webp,,#654321,#8B0000,#0000FF,,,,,180,1,2.4,840,400,30,25,5,0.5,2,多国籍料理,2人,同僚
+773,SG,北東地区,女性,33歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0773_2.webp,バランスのとれたヘルシーな料理で、子どもたちも大好き,"This dish consists of scrambled eggs, sautéed vegetables, and ham with a sauce.
+
+### Ingredients:
+- Scrambled Eggs: Eggs, herbs (possibly parsley or chives).
+- Sautéed Vegetables: Broccoli, red bell pepper, green bell pepper, yellow bell pepper, mushrooms.
+- Ham with Sauce: Ham slices, possibly a mustard or creamy sauce.
+
+### Estimated Nutrients:
+- Calories: Approximately 400-600 kcal
+- Protein: 30-40g
+- Carbohydrates: 20-30g
+- Fats: 25-35g
+
+### Plate/Bowl Count:
+- 1 plate
+
+### Main Colors of Food:
+- Scrambled Eggs: `#F5CBA7`
+- Vegetables: 
+  - Broccoli: `#228B22`
+  - Red Bell Pepper: `#FF6347`
+  - Green Bell Pepper: `#32CD32`
+  - Yellow Bell Pepper: `#FFD700`
+  - Mushrooms: `#D2B48C`
+- Ham: `#D2691E`
+- Sauce: `#D2B48C`",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0773_2.webp,,#F5CBA7,#228B22,#FF6347,#32CD32,#FFD700,#D2B48C,#D2691E,225,4,2.3,710,500,30,25,20,2,1,洋食,1人,家族
+774,SG,北東地区,女性,34歳,"S$ 150,000 - 199,999",3,未婚,いない,技術職（エンジニア、プログラマーなど）,SEQ0774_1.webp,短期休暇中の夕食。パートナーと一緒に食べた,"This image shows a hot pot meal setup with various ingredients.
+
+Ingredients:
+- Hot pot broth (in the pot)
+- Lettuce
+- Fish paste on a stick
+- Assorted vegetables: corn, carrots, mushrooms, spinach
+- Tofu
+- Enoki mushrooms
+- Sauce (in a small bowl)
+
+Estimated Nutrients:
+- Calories: ~400-600 kcal
+- Protein: ~20-30g
+- Carbohydrates: ~50-70g
+- Fat: ~10-20g
+
+Plate/Bowl Counts:
+- 1 pot
+- 2 bowls
+- 1 small sauce dish
+
+Main Colors of Food (HTML Color Codes):
+- Green (Lettuce, Spinach): #228B22
+- White (Tofu, Enoki Mushrooms): #FFFFFF
+- Yellow (Corn): #FFD700
+- Orange (Carrots): #FFA500
+- Brown (Mushrooms): #8B4513
+
+This setup is typical for a hot pot meal, where ingredients are cooked in the broth at the table.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0774_1.webp,,#228B22,#FFFFFF,#FFD700,#FFA500,#8B4513,,,240,10,2,710,400,20,10,50,5,2,伝統ローカル料理,2人,恋人・配偶者
+775,SG,北西地区,女性,34歳,"S$ 100,000 - 124,999",2,既婚,いる,管理職（課長クラス以上）,SEQ0775_1.webp,平日の午後のランチ。ハンバーガーとフライドポテトが食べたかったので、この日はそれを食べた,"Description:
+
+This is a fast-food meal consisting of:
+
+1. Cheeseburger with Bacon:
+   - Ingredients: Beef patty, cheese, bacon, bun, possibly lettuce, tomato, and condiments.
+   - Estimated Nutrients: ~700 calories, 40g protein, 50g carbs, 40g fat.
+
+2. Fried Chicken Sandwich:
+   - Ingredients: Fried chicken patty, bun, coleslaw, possibly pickles and condiments.
+   - Estimated Nutrients: ~600 calories, 30g protein, 60g carbs, 30g fat.
+
+3. Cheese Fries:
+   - Ingredients: Crinkle-cut fries, cheese sauce.
+   - Estimated Nutrients: ~500 calories, 10g protein, 60g carbs, 25g fat.
+
+4. Chicken Nuggets:
+   - Ingredients: Breaded chicken pieces.
+   - Estimated Nutrients: ~400 calories, 20g protein, 30g carbs, 25g fat.
+
+5. Milkshake:
+   - Ingredients: Ice cream, milk, flavoring.
+   - Estimated Nutrients: ~600 calories, 15g protein, 80g carbs, 25g fat.
+
+6. Soda:
+   - Ingredients: Carbonated water, sugar, flavoring.
+   - Estimated Nutrients: ~200 calories, 0g protein, 50g carbs, 0g fat.
+
+Plate/Bowl Counts:
+- 1 tray with multiple items.
+
+Main Colors of Food (HTML Color Codes):
+- Cheeseburger: #D2691E (brown), #FFD700 (yellow)
+- Chicken Sandwich: #F5DEB3 (wheat), #8B4513 (saddle brown)
+- Cheese Fries: #FFD700 (yellow), #F5DEB3 (wheat)
+- Chicken Nuggets: #D2691E (brown)
+- Milkshake: #FFF8DC (cornsilk), #8B4513 (saddle brown)
+- Soda: #FF4500 (orange red)
+
+These are rough estimates and can vary based on portion size and specific ingredients used.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0775_1.webp,,#D2691E,#FFD700,#F5DEB3,#8B4513,#FFD700,#F5DEB3,#D2691E,500,10,3.4,550,550,20,30,50,4,1,洋食,1人,自分
+776,SG,北西地区,女性,35歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0776_1.webp,"朝食
+職場
+一人で
+食事とメールチェックを同時にしている
+おかゆ
+自分で","This appears to be a bowl of porridge or congee.
+
+### Ingredients:
+- Rice or oats
+- Water or broth
+- Optional: salt, sugar, or other seasonings
+
+### Estimated Nutrients (per serving):
+- Calories: 150-200 kcal
+- Carbohydrates: 30-40g
+- Protein: 3-5g
+- Fat: 1-2g
+
+### Plate/Bowl Count:
+- 1 bowl
+
+### Main Colors:
+- Light beige (#F5F5DC)
+- Light green spoon (#98FB98)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0776_1.webp,,#F5F5DC,#98FB98,,,,,,102,6,1.6,490,150,3,1,30,3,1,伝統ローカル料理,1人,自分
+777,SG,シンガポール中央地区,女性,37歳,"S$ 125,000 - 149,999",2,既婚,いる,管理職（課長クラス以上）,SEQ0777_2.webp,今朝の自宅での私たち家族の朝食。バターを乗せたパンケーキ,"The image shows a single piece of bread, possibly a biscuit or scone, on a plate. There is a packet of salted butter next to it, along with a knife and fork.
+
+Ingredients:
+- Flour
+- Baking powder
+- Salt
+- Butter
+- Milk or water
+
+Estimated Nutrients:
+- Calories: ~150
+- Carbohydrates: ~20g
+- Protein: ~3g
+- Fat: ~7g
+
+Plate/Bowl Count:
+- 1 plate
+
+Main Colors of Food:
+- Bread: `#F5DEB3` (Wheat)
+- Butter packet: `#FFFFFF` (White) with `#0000FF` (Blue) text
+
+The plate has a red rim and various colorful designs.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0777_2.webp,,#F5DEB3,#FFFFFF,#0000FF,,,,,90,4,1.9,470,150,3,7,20,2,4,洋食,4人以上,家族
+778,SG,北西地区,女性,38歳,"S$ 90,000 - 99,999",2,既婚,いる,事務職（教員も含む）,SEQ0778_1.webp,家族と一緒にパリのリバークルーズでランチタイム,"This dish features a piece of chicken breast with a brown sauce, accompanied by mashed potatoes and a garnish on top. 
+
+Ingredients:
+- Chicken breast
+- Brown sauce (possibly made with stock, flour, butter, and seasonings)
+- Mashed potatoes (potatoes, butter, milk, salt)
+- Garnish (possibly fried or baked vegetable)
+
+Estimated Nutrients:
+- Calories: ~600-800 kcal
+- Protein: ~40-50g
+- Carbohydrates: ~50-60g
+- Fat: ~25-35g
+
+Plate/Bowl Count:
+- 1 plate
+
+Main Colors of Food:
+- Chicken and sauce: #A0522D (Sienna)
+- Mashed potatoes: #F5DEB3 (Wheat)
+- Plate: #4682B4 (Steel Blue)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0778_1.webp,,#A0522D,#F5DEB3,#4682B4,,,,,345,10,2.4,830,600,40,25,50,5,3,洋食,3人,家族
+779,SG,南西地区,女性,39歳,"S$ 100,000 - 124,999",2,未婚,いない,管理職（課長クラス以上）,SEQ0779_1.webp,"遅めの昼食
+2023年12月23日、午後3時
+親友の家で撮影
+私の姉（または妹）、友人とその母と一緒にいた。
+クリスマス前のお祝いで集まっていた
+マカロニ＆チーズ、サツマイモのフライ、ハム、手羽先などの料理。すべて友人が作ってくれた","This image shows a variety of dishes on a table. Here's a breakdown:
+
+1. Baked Dish with Chicken:
+   - Ingredients: Chicken, spinach, cherry tomatoes, cheese.
+   - Estimated Nutrients: 
+     - Calories: ~400 per serving
+     - Protein: ~30g
+     - Carbs: ~10g
+     - Fat: ~25g
+   - Main Colors: #D2691E (chicken), #FF6347 (tomatoes), #228B22 (spinach)
+
+2. Baked Dish with Salmon:
+   - Ingredients: Salmon, vegetables, cheese.
+   - Estimated Nutrients: 
+     - Calories: ~350 per serving
+     - Protein: ~25g
+     - Carbs: ~15g
+     - Fat: ~20g
+   - Main Colors: #FFA07A (salmon), #FFD700 (cheese), #228B22 (vegetables)
+
+3. Salad with Ham:
+   - Ingredients: Ham, cucumber, cherry tomatoes, lettuce.
+   - Estimated Nutrients: 
+     - Calories: ~150 per serving
+     - Protein: ~10g
+     - Carbs: ~10g
+     - Fat: ~5g
+   - Main Colors: #FF6347 (tomatoes), #32CD32 (lettuce), #FFC0CB (ham)
+
+4. Fries with Dip:
+   - Ingredients: Mixed fries (possibly sweet potato and regular), cheese dip.
+   - Estimated Nutrients: 
+     - Calories: ~300 per serving
+     - Protein: ~5g
+     - Carbs: ~40g
+     - Fat: ~15g
+   - Main Colors: #FFD700 (fries), #FF8C00 (dip)
+
+5. Chicken Wings:
+   - Ingredients: Chicken wings, barbecue sauce, sesame seeds.
+   - Estimated Nutrients: 
+     - Calories: ~500 per serving
+     - Protein: ~35g
+     - Carbs: ~20g
+     - Fat: ~30g
+   - Main Colors: #8B0000 (sauce), #FFFFFF (sesame seeds)
+
+6. Fruits:
+   - Ingredients: Cherries, green grapes.
+   - Estimated Nutrients: 
+     - Calories: ~100 per serving
+     - Protein: ~1g
+     - Carbs: ~25g
+     - Fat: ~0g
+   - Main Colors: #8B0000 (cherries), #ADFF2F (grapes)
+
+Plate/Bowl Counts: 5 main dishes, 1 fruit container.
+
+These are rough estimates and can vary based on portion sizes and specific recipes.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0779_1.webp,,#D2691E,#FF6347,#228B22,#FFA07A,#FFD700,#228B22,#FF6347,195,10,1.5,670,400,30,25,10,1,4,洋食,4人以上,友達
+780,SG,南東地区,女性,39歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0780_1.webp,1月12日の娘との朝食。ショッピングモール内のレストランで買ったフライドチキンとフライドポテト,"Description:
+The image shows a plate of food consisting of fried chicken, crinkle-cut fries, coleslaw, and dipping sauces.
+
+Ingredients:
+- Fried Chicken: Chicken, flour, spices, oil
+- Crinkle-Cut Fries: Potatoes, oil, salt
+- Coleslaw: Cabbage, carrots, mayonnaise, vinegar
+- Sauces: Likely ketchup and gravy
+
+Estimated Nutrients:
+- Calories: ~800-1000 kcal
+- Protein: ~30-40g
+- Carbohydrates: ~80-100g
+- Fat: ~40-60g
+
+Plate/Bowl Counts:
+- 1 main plate
+- 2 small sauce containers
+
+Main Colors of Food (HTML Color Codes):
+- Fried Chicken: #D2691E (chocolate)
+- Fries: #FFD700 (gold)
+- Coleslaw: #FFFACD (lemon chiffon)
+- Ketchup: #FF4500 (orange red)
+- Gravy: #8B4513 (saddle brown)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0780_1.webp,,#D2691E,#FFD700,#FFFACD,#FF4500,#8B4513,,,450,16,1.6,510,800,30,40,80,8,2,洋食,2人,家族
+781,SG,南東地区,女性,40歳,"S$ 125,000 - 149,999",2,既婚,いる,自由業、専門職（医者、弁護士など）,SEQ0781_1.webp,昼食。家族で食べている。夫が作ってくれた豚角煮ライス。写真は先週末に撮ったもの,"This dish appears to be a braised pork dish with eggs, likely a type of Asian stew.
+
+### Ingredients:
+- Pork (likely belly or shoulder)
+- Hard-boiled eggs
+- Soy sauce
+- Sugar
+- Garlic
+- Star anise
+- Cinnamon
+- Black pepper
+- Possibly other spices or flavorings
+
+### Estimated Nutrients (per serving):
+- Calories: 400-600 kcal
+- Protein: 25-35 g
+- Fat: 30-40 g
+- Carbohydrates: 10-20 g
+
+### Plate/Bowl Count:
+- 1 bowl
+
+### Main Colors of Food:
+- Brown (#8B4513)
+- Dark Brown (#5C4033)
+- Light Brown (#D2B48C)
+- Red bowl (#FF4500)
+
+This is a rough estimation and can vary based on the specific recipe and portion size.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0781_1.webp,,#8B4513,#5C4033,#D2B48C,#FF4500,,,,195,2,1.6,670,400,25,30,10,1,2,伝統ローカル料理,2人,家族
+782,SG,シンガポール中央地区,女性,40歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0782_1.webp,夕食,"The image shows a variety of dishes on a table. Here's a description of each:
+
+1. Dish 1 (Top Left - Stir-fried Vegetables)
+   - Ingredients: Cabbage, green onions, red chili peppers, garlic.
+   - Estimated Nutrients: 
+     - Calories: ~150
+     - Protein: ~5g
+     - Carbs: ~30g
+     - Fat: ~2g
+   - Plate/Bowl Count: 1
+   - Main Colors: 
+     - Cabbage: #F5F5DC (Beige)
+     - Green Onions: #228B22 (Forest Green)
+     - Red Chili: #FF4500 (Orange Red)
+
+2. Dish 2 (Top Right - Stir-fried Meat and Peppers)
+   - Ingredients: Sliced meat (likely pork or beef), green peppers, sauce.
+   - Estimated Nutrients: 
+     - Calories: ~300
+     - Protein: ~25g
+     - Carbs: ~10g
+     - Fat: ~20g
+   - Plate/Bowl Count: 1
+   - Main Colors: 
+     - Meat: #8B4513 (Saddle Brown)
+     - Peppers: #556B2F (Dark Olive Green)
+
+3. Dish 3 (Bottom Right - Shredded Carrots)
+   - Ingredients: Carrots, possibly seasoned with oil or vinegar.
+   - Estimated Nutrients: 
+     - Calories: ~100
+     - Protein: ~1g
+     - Carbs: ~24g
+     - Fat: ~0.5g
+   - Plate/Bowl Count: 1
+   - Main Colors: 
+     - Carrots: #FFA500 (Orange)
+
+4. Dish 4 (Bottom Left - Braised Meat)
+   - Ingredients: Braised pork or beef, soy sauce, spices.
+   - Estimated Nutrients: 
+     - Calories: ~500
+     - Protein: ~40g
+     - Carbs: ~15g
+     - Fat: ~35g
+   - Plate/Bowl Count: 1
+   - Main Colors: 
+     - Meat: #3B2F2F (Dark Brown)
+
+Overall, there are four dishes with a variety of colors and ingredients, providing a balanced meal with vegetables and protein.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0782_1.webp,,#F5F5DC,#228B22,#FF4500,#8B4513,#556B2F,#FFA500,#3B2F2F,111,6,4.8,800,150,5,2,30,3,1,伝統ローカル料理,1人,自分
+783,SG,南西地区,女性,40歳,"S$ 100,000 - 124,999",2,既婚,いる,専業主婦・主夫,SEQ0783_1.webp,インド料理のメティ・マタル（カレー）,"This appears to be a creamy soup or stew with herbs.
+
+Ingredients:
+- Cream or milk
+- Herbs (possibly spinach or parsley)
+- Broth or stock
+- Seasonings (salt, pepper, etc.)
+
+Estimated Nutrients (per serving):
+- Calories: 150-250 kcal
+- Protein: 5-10 g
+- Carbohydrates: 10-20 g
+- Fat: 10-15 g
+
+Plate/Bowl Counts:
+- Serves approximately 4-6 bowls
+
+Main Colors of Food:
+- Creamy beige: #D2B48C
+- Green (herbs): #556B2F",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0783_1.webp,,#D2B48C,#556B2F,,,,,,75,2,3.7,620,150,5,10,10,1,1,多国籍料理,1人,自分
+784,SG,シンガポール中央地区,女性,41歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0784_1.webp,2023年のボクシング・デーに夫と息子との家族旅行でベトナムに行った時の朝食,"This is a bowl of Vietnamese pho, a traditional noodle soup.
+
+Ingredients:
+- Rice noodles
+- Beef slices
+- Bean sprouts
+- Fresh basil leaves
+- Green onions
+- Lime
+- Broth (typically beef-based)
+
+Estimated Nutrients (per serving):
+- Calories: ~350
+- Protein: ~25g
+- Carbohydrates: ~50g
+- Fat: ~5g
+
+Plate/Bowl Counts:
+- 1 large bowl for the pho
+- 1 small plate for herbs and lime
+
+Main Colors of Food (HTML color codes):
+- Green (basil, green onions): #228B22
+- Light brown (beef): #D2B48C
+- White (noodles, bean sprouts): #FFFFFF
+- Light yellow (broth): #F5DEB3",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0784_1.webp,,#228B22,#D2B48C,#FFFFFF,#F5DEB3,,,,240,10,3.5,510,350,25,5,50,5,3,東南アジア料理,3人,家族
+785,SG,南西地区,女性,43歳,"S$ 150,000 - 199,999",3,既婚,いる,その他,SEQ0785_1.webp,私の昼食。これを食べると夜まで元気に働ける,"This meal consists of a clay pot soup, a bowl of rice, and a small dish of dipping sauce.
+
+### Ingredients:
+- Clay Pot Soup: Likely contains broth, meat (possibly pork or chicken), and leafy greens.
+- Rice: Plain white rice.
+- Dipping Sauce: Soy sauce with sliced green chilies.
+
+### Estimated Nutrients:
+- Clay Pot Soup: 
+  - Calories: ~200 kcal
+  - Protein: ~15g
+  - Fat: ~10g
+  - Carbohydrates: ~10g
+- Rice:
+  - Calories: ~200 kcal
+  - Protein: ~4g
+  - Fat: ~0.5g
+  - Carbohydrates: ~45g
+- Dipping Sauce:
+  - Calories: ~20 kcal
+  - Protein: ~1g
+  - Fat: ~0g
+  - Carbohydrates: ~3g
+
+### Plate/Bowl Counts:
+- 1 clay pot
+- 1 bowl for rice
+- 1 small dish for sauce
+
+### Main Colors of Food (HTML Color Codes):
+- Clay Pot Soup: 
+  - Dark Brown (#654321)
+  - Green (#228B22)
+- Rice: 
+  - White (#FFFFFF)
+- Dipping Sauce: 
+  - Black (#000000)
+  - Green (#32CD32)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0785_1.webp,,#654321,#228B22,#FFFFFF,#000000,#32CD32,,,105,2,4.6,480,200,15,10,10,1,1,伝統ローカル料理,1人,自分
+786,SG,シンガポール中央地区,女性,44歳,"S$ 150,000 - 199,999",3,既婚,いる,管理職（課長クラス以上）,SEQ0786_1.webp,2000年2月1日、自宅で撮影した私の昼食。中国から来た友人と一緒に、彼が持ってきてくれた料理を食べている,"Description:
+The dish appears to be cooked duck necks, likely seasoned and braised.
+
+Ingredients:
+- Duck necks
+- Soy sauce
+- Ginger
+- Garlic
+- Star anise
+- Sugar
+- Cooking oil
+
+Estimated Nutrients (per serving):
+- Calories: 250
+- Protein: 20g
+- Fat: 18g
+- Carbohydrates: 5g
+
+Plate/Bowl Count:
+1 bowl
+
+Main Colors of Food:
+- Dark Brown (#8B4513)
+- Medium Brown (#A0522D)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0786_1.webp,,#8B4513,#A0522D,,,,,,129,1,2,390,250,20,18,5,0.5,2,中華,2人,友達
+787,SG,南東地区,女性,45歳,"S$ 60,000 - 69,999",1,未婚,いない,事務職（教員も含む）,SEQ0787_1.webp,大好きな食べ物。昼食で、家族と一緒に食べた。母が作ってくれた,"The image shows a variety of foods and snacks arranged on a table. Here's a breakdown:
+
+### Ingredients:
+- Vegetables: Cabbage, mushrooms
+- Proteins: Eggs, tofu, sausages, crab sticks, meatballs
+- Snacks: Various packaged snacks, chocolates
+- Others: Possibly some fried items in containers
+
+### Estimated Nutrients:
+- Calories: Approximately 2000-3000 kcal (varies widely based on portion sizes and specific items)
+- Proteins: 100-150g
+- Carbohydrates: 250-350g
+- Fats: 80-120g
+
+### Plate/Bowl Counts:
+- Plates/Bowls: 5 visible plates/bowls with food
+
+### Main Colors of Food (HTML Color Codes):
+- White (Cabbage, Tofu): #FFFFFF
+- Brown (Meatballs, Fried Items): #8B4513
+- Red (Crab Sticks): #FF6347
+- Yellow (Eggs, Snacks): #FFD700
+
+This setup appears to be for a casual meal or gathering with a mix of fresh and packaged foods.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0787_1.webp,,#FFFFFF,#8B4513,#FF6347,#FFD700,,,,990,50,2.4,490,400,20,30,50,25,3,伝統ローカル料理,3人,家族
+788,SG,北東地区,女性,45歳,"S$ 150,000 - 199,999",3,既婚,いる,営業・販売職（セールスマン、店員など）,SEQ0788_1.webp,ビーフカレーで、今日の夕食。2024年1月15日。私が作って、家族全員でシェアした,"This dish appears to be a curry or stew with a rich, orange-colored sauce and chunks of meat or vegetables.
+
+### Ingredients:
+- Meat or vegetables (possibly eggplant or similar)
+- Curry spices (turmeric, cumin, coriander, etc.)
+- Coconut milk or cream
+- Onion
+- Garlic
+- Ginger
+- Chili peppers
+- Salt and pepper
+
+### Estimated Nutrients (per serving):
+- Calories: 300-400 kcal
+- Protein: 15-25 g
+- Carbohydrates: 20-30 g
+- Fat: 20-30 g
+
+### Plate/Bowl Count:
+- 1 bowl
+
+### Main Colors:
+- Orange: #FFA500
+- Brown: #8B4513
+- White (bowl): #FFFFFF",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0788_1.webp,,#FFA500,#8B4513,#FFFFFF,,,,,165,4,4,700,300,15,20,20,2,3,伝統ローカル料理,3人,家族
+789,SG,北東地区,女性,46歳,"S$ 100,000 - 124,999",2,未婚,いない,事務職（教員も含む）,SEQ0789_1.webp,"昼食
+一人で食べている
+自分で作ったフィッシュボールクラッカーとトムヤムライス","The image shows a plate of fried rice with sliced cucumbers on top. 
+
+### Ingredients:
+- Rice
+- Eggs
+- Sliced cucumbers
+- Possibly onions or shallots
+- Seasonings (likely soy sauce, chili, or other spices)
+
+### Estimated Nutrients (per serving):
+- Calories: ~400-500 kcal
+- Protein: ~10-15g
+- Carbohydrates: ~60-70g
+- Fat: ~10-15g
+
+### Plate/Bowl Count:
+- 1 plate
+
+### Main Colors of Food:
+- Rice: #D2691E (chocolate)
+- Cucumbers: #228B22 (forest green)
+- Plate: #4682B4 (steel blue) with #FFFFFF (white)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0789_1.webp,,#D2691E,#228B22,#4682B4,#FFFFFF,,,,240,12,4.8,310,400,10,10,60,6,1,伝統ローカル料理,1人,自分
+790,SG,南西地区,女性,47歳,"S$ 200,000 or more",3,既婚,いる,管理職（課長クラス以上）,SEQ0790_1.webp,朝食 - 配偶者と子どもたちと、家族で一緒に食べる,"The image shows a plate of traditional fried pastries. There are two types: one is a round, donut-like pastry, and the other is a twisted, looped pastry.
+
+### Ingredients:
+- Round Pastries:
+  - Flour
+  - Sugar
+  - Eggs
+  - Milk
+  - Baking powder
+  - Oil (for frying)
+
+- Twisted Pastries:
+  - Flour
+  - Water
+  - Salt
+  - Oil (for frying)
+
+### Estimated Nutrients (per serving):
+- Calories: 300-400 kcal
+- Carbohydrates: 40-50g
+- Proteins: 5-7g
+- Fats: 15-20g
+
+### Plate/Bowl Counts:
+- 1 large plate
+
+### Main Colors of Food:
+- Round Pastries: `#D2691E` (Chocolate)
+- Twisted Pastries: `#F4A460` (Sandy Brown)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0790_1.webp,,#D2691E,#F4A460,,,,,,165,8,2.3,370,300,6,15,40,4,3,伝統ローカル料理,3人,家族
+791,SG,シンガポール中央地区,女性,48歳,"S$ 50,000 - 59,999",1,未婚,いない,事務職（教員も含む）,SEQ0791_1.webp,一人でのんびりしながら食べたランチ,"Description:
+This dish appears to be a bowl of stir-fried noodles with vegetables and meat.
+
+Ingredients:
+- Noodles
+- Bok choy or similar leafy greens
+- Sliced meat (possibly beef or pork)
+- Sausage or similar processed meat
+- Soy sauce or similar seasoning
+
+Estimated Nutrients:
+- Calories: 500-700 kcal
+- Protein: 20-30 g
+- Carbohydrates: 60-80 g
+- Fat: 15-25 g
+
+Plate/Bowl Count:
+- 1 bowl
+
+Main Colors of Food:
+- Noodles: #D2B48C (Tan)
+- Greens: #228B22 (Forest Green)
+- Meat: #8B4513 (Saddle Brown)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0791_1.webp,,#D2B48C,#228B22,#8B4513,,,,,285,12,2.2,770,500,20,15,60,6,1,伝統ローカル料理,1人,自分
+792,SG,シンガポール中央地区,女性,50歳,"S$ 50,000 - 59,999",1,既婚,いる,管理職（課長クラス以上）,SEQ0792_1.webp,昼食。6月9日撮影。Cocoという名前のカフェ。同僚2人と一緒だった。食事を楽しみながら、彼らとおしゃべりをしていた,"This dish is Nasi Lemak, a popular Malaysian meal. It consists of:
+
+- Rice: Cooked in coconut milk.
+- Fried Egg: Placed on top of the rice.
+- Fried Chicken: Crispy and golden brown.
+- Sambal: A spicy chili paste.
+- Cucumber Slices: Fresh and crunchy.
+- Fried Anchovies and Peanuts: Served as a side.
+
+Estimated Nutrients (approximate per serving):
+- Calories: 800 kcal
+- Protein: 35g
+- Carbohydrates: 90g
+- Fat: 35g
+
+Plate/Bowl Counts: 1 main plate, 2 cups (one with a drink, one with a dark liquid).
+
+Main Colors of Food:
+- White (#FFFFFF) for rice and egg.
+- Brown (#8B4513) for fried chicken and peanuts.
+- Red (#8B0000) for sambal.
+- Green (#008000) for cucumber.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0792_1.webp,,#FFFFFF,#8B4513,#8B0000,#008000,,,,480,18,2,560,800,35,35,90,9,2,伝統ローカル料理,2人,同僚
+793,SG,北東地区,女性,52歳,"S$ 70,000 - 79,999",1,既婚,いる,専業主婦・主夫,SEQ0793_1.webp,自宅での朝食。母が作ってくれた。プレーンのパン＋目玉焼きをサンドイッチのようにして食べた。今日2024年1月17日に撮影,"The image shows a simple meal consisting of an omelette and a loaf of white bread.
+
+### Ingredients:
+- Omelette: Eggs, possibly with some vegetables or seasonings.
+- White Bread: Wheat flour, water, yeast, sugar, salt, and possibly preservatives.
+
+### Estimated Nutrients:
+- Omelette (per serving):
+  - Calories: ~150-200 kcal
+  - Protein: ~10-15 g
+  - Fat: ~10-15 g
+  - Carbohydrates: ~1-2 g
+
+- White Bread (per slice):
+  - Calories: ~70-80 kcal
+  - Protein: ~2-3 g
+  - Fat: ~1 g
+  - Carbohydrates: ~12-15 g
+
+### Plate/Bowl Counts:
+- 1 bowl for the omelette.
+
+### Main Colors of Food:
+- Omelette: 
+  - Light golden brown (#D2B48C)
+  - Yellow (#FFD700)
+
+- White Bread:
+  - Light brown (#F5DEB3)
+  - White (#FFFFFF)",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0793_1.webp,,#D2B48C,#FFD700,#F5DEB3,#FFFFFF,,,,63,0,2,640,150,10,10,1,0.1,1,洋食,1人,家族
+794,SG,北西地区,女性,54歳,"S$ 50,000 - 59,999",1,未婚,いる,事務職（教員も含む）,SEQ0794_1.webp,"夕食
+先週の2024年1月11日（木）午後8時3分
+自宅で
+母
+テレビを見ながら
+ポークチョップにライスと野菜と目玉焼きを添えたもの
+母が作ってくれた","Description:
+The plate contains a serving of white rice, a fried egg, a piece of grilled meat, and a side of sautéed greens with sliced vegetables.
+
+Ingredients:
+- White rice
+- Fried egg
+- Grilled meat (likely pork or chicken)
+- Sautéed greens (possibly spinach or similar leafy greens)
+- Sliced vegetables (possibly bamboo shoots or similar)
+
+Estimated Nutrients:
+- Calories: ~600 kcal
+- Protein: ~30g
+- Carbohydrates: ~70g
+- Fat: ~25g
+
+Plate/Bowl Counts:
+- 1 plate
+
+Main Colors of Food (HTML Color Codes):
+- White (rice, egg): #FFFFFF
+- Brown (meat): #8B4513
+- Green (vegetables): #228B22
+- Yellow (egg yolk): #FFD700",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0794_1.webp,,#FFFFFF,#8B4513,#228B22,#FFD700,,,,375,14,2.1,830,600,30,25,70,7,2,伝統ローカル料理,2人,家族
+795,SG,シンガポール中央地区,女性,54歳,"S$ 150,000 - 199,999",3,既婚,いる,管理職（課長クラス以上）,SEQ0795_1.webp,朝食のチョコレートパン。朝家族でパン屋さんで買ってきた,"### Description
+The chocolate bread appears to be a type of swirled or marbled bread, with a mix of chocolate and plain dough. It has a rich, layered appearance.
+
+### Ingredients
+Typical ingredients for chocolate bread might include:
+- All-purpose flour
+- Cocoa powder
+- Sugar
+- Yeast
+- Milk
+- Butter
+- Eggs
+- Salt
+- Vanilla extract
+
+### Estimated Nutrients (per serving)
+- Calories: 250-300 kcal
+- Carbohydrates: 40-50 g
+- Protein: 5-7 g
+- Fat: 8-12 g
+- Fiber: 2-3 g
+- Sugars: 15-20 g
+
+### Plate/Bowl Counts
+- The bread is placed in a single glass dish.
+
+### Main Colors of Food
+- Dark Brown: #5C4033
+- Light Brown: #D2B48C
+- Cream/Beige: #F5F5DC
+
+These colors represent the chocolate and plain dough swirls.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0795_1.webp,,#5C4033,#D2B48C,#F5F5DC,,,,,159,8,2.5,460,250,5,8,40,4,3,洋食,3人,家族
+796,SG,シンガポール中央地区,女性,55歳,"S$ 80,000 - 89,999",2,既婚,いない,管理職（課長クラス以上）,SEQ0796_1.webp,夕食。2024年1月17日午後7時。一人。エコノミックライス,"This dish appears to be a simple meal served in a takeout container. It includes:
+
+- Ingredients: 
+  - White rice
+  - Bitter melon (green vegetable)
+  - Potatoes
+  - Scrambled eggs
+  - Possibly some sauce or seasoning
+
+- Estimated Nutrients (approximate values):
+  - Calories: 400-500 kcal
+  - Carbohydrates: 70-80g
+  - Protein: 10-15g
+  - Fat: 5-10g
+
+- Plate/Bowl Count: 1 takeout container
+
+- Main Colors of Food:
+  - White (#FFFFFF) for rice
+  - Green (#8FBC8F) for bitter melon
+  - Yellow (#FFD700) for eggs
+  - Light brown (#D2B48C) for potatoes
+
+This is a rough estimate and actual values may vary based on portion sizes and preparation methods.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0796_1.webp,,#FFFFFF,#8FBC8F,#FFD700,#D2B48C,,,,255,14,2.3,730,400,10,5,70,7,1,伝統ローカル料理,1人,自分
+797,SG,北西地区,女性,56歳,"S$ 125,000 - 149,999",2,既婚,いる,自由業、専門職（医者、弁護士など）,SEQ0797_1.webp,"大晦日に母の家で食べた夕食
+家族（母、きょうだい、夫、息子）と一緒に
+鍋料理の準備を手伝っている
+食事は主にきょうだいが準備し、私はイベリコ豚のバラ肉を提供した","This image shows a hot pot meal setup with various ingredients arranged around a central pot. Here's a breakdown:
+
+### Ingredients:
+- Meats: Sliced beef, chicken, and shrimp.
+- Seafood: Squid and shrimp.
+- Vegetables: Lettuce, baby corn, and possibly tofu.
+- Others: Quail eggs, sausages, and meatballs.
+- Noodles: Vermicelli or similar thin noodles.
+
+### Estimated Nutrients (per serving):
+- Calories: 500-700 kcal
+- Protein: 30-50g
+- Carbohydrates: 40-60g
+- Fats: 20-30g
+
+### Plate/Bowl Counts:
+- Approximately 10 plates/bowls with food.
+- Additional empty bowls and plates for serving.
+
+### Main Colors of Food (HTML Color Codes):
+- Meat: #A52A2A (Brown)
+- Seafood: #F5F5DC (Beige)
+- Vegetables: #7FFF00 (Chartreuse)
+- Eggs: #FFFFF0 (Ivory)
+- Sausages: #D2691E (Chocolate)
+
+This setup is typical for a communal dining experience where ingredients are cooked in the central pot.",https://hakuhodo-hill.com/glpe/photos/scenes-of-meals/webp/SEQ0797_1.webp,,#A52A2A,#F5F5DC,#7FFF00,#FFFFF0,#D2691E,,,270,8,1.9,590,500,30,20,40,4,6,伝統ローカル料理,4人以上,家族
